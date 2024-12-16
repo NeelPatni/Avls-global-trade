@@ -102,7 +102,7 @@ const Footer = () => {
             All Rights Reserved. <span className="font-bold">Aroma International</span>
           </p>
           <p>
-            Managed By <a href="#" className="hover:cursor-pointer hover:underline hover:text-blue-600">TaniyaWebfix</a>
+            Managed By <a href="https://www.taniyawebfix.com/" target="_blank" className="hover:cursor-pointer hover:underline text-blue-600">TaniyaWebfix Pvt.Ltd</a>
           </p>
         </div>
       </div>

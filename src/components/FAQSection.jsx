@@ -41,7 +41,7 @@ const FAQSection = () => {
         <h2 className="text-3xl font-bold mb-6 text-center">FAQs</h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="border rounded-md border-[#41a752]">
+            <div key={index} className="border rounded-md border-[#184b44]">
               <button
                 className="flex justify-between items-center w-full p-4 text-left font-semibold text-black"
                 onClick={() => toggleAccordion(index)}
@@ -63,7 +63,7 @@ const FAQSection = () => {
 
       {/* Export Inquiry Form Section */}
       <div className="flex items-center justify-center w-full md:w-1/2 p-4">
-        <div className="bg-[#41a752] p-6 rounded-md text-white w-full max-w-sm md:max-w-md">
+        <div className="bg-[#184b44] p-6 rounded-md text-white w-full max-w-sm md:max-w-md">
           <h2 className="text-2xl font-bold mb-4">Export Inquiry</h2>
           <p className="mb-6">Get in touch with us for the best deals on premium Indian-origin products.</p>
           <form className="space-y-4">
@@ -89,7 +89,7 @@ const FAQSection = () => {
             ></textarea>
             <button
               type="submit"
-              className="bg-[#32346a] text-white w-full py-2 rounded-md font-bold hover:bg-[#32346a]"
+              className="bg-[#41a752] text-white w-full py-2 rounded-md font-bold hover:bg-[#41a752]"
             >
               SEND INQUIRY
             </button>

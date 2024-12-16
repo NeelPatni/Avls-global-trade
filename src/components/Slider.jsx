@@ -10,6 +10,7 @@ const Slider = () => {
       infiniteLoop
       showThumbs={false}
       showArrows
+      swipeable={true}
       showStatus={false}
       interval={5000}
       className="relative" // Use relative positioning for better control

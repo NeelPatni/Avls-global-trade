@@ -119,7 +119,7 @@ const Home = () => {
       </section>
 
       {/* Certifications Section */}
-      <section className="py-12 px-4 md:px-16 bg-gray-100">
+      {/* <section className="py-12 px-4 md:px-16 bg-gray-100">
         <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
           Our Certifications
         </h3>
@@ -128,18 +128,18 @@ const Home = () => {
             {
               title: "ISO 9001:2015",
               description: "Certified for Quality Management Systems.",
-              img: "/images/iso9001.jpg",
+              img: assets.ISO_9001,
             },
             {
               title: "FSSAI Certified",
               description: "Ensuring food safety and hygiene standards.",
-              img: "/images/fssai.jpg",
+              img: assets.FSSAI_certificate,
             },
             {
               title: "Global GAP",
               description:
                 "Good Agricultural Practices certification for safe and sustainable agriculture.",
-              img: "/images/globalgap.jpg",
+              img: assets.Global_GAP,
             },
           ].map((certification, index) => (
             <div
@@ -162,14 +162,14 @@ const Home = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
       <Testimonials />
       {/* FAQ Section */}
       <FAQSection />
       {/* Contact CTA Section */}
-      <section className="py-12 px-4 md:px-16 bg-green-700 text-white">
+      <section className="py-12 px-4 md:px-16 bg-[#184b44] text-white">
         <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">
           Ready to Get Started?
         </h3>

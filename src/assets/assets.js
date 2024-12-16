@@ -1,5 +1,6 @@
 import Logo from "./logo.png";
 import About_Image from "./About_Image.jpg";
+import Contact_Img from "./Contact_Img.jpg";
 import slider_01 from "./slider_01.webp";
 import slider_02 from "./slider_02.jpg";
 import slider_03 from "./slider_03.jpg";
@@ -21,9 +22,18 @@ import Red_Onions from "./Red_Onions.jpg";
 import Chana_Dal from "./Chana_Dal.jpg";
 import Sweet_Potato from "./Sweet_Potato.jpg";
 import Cauliflower from "./Cauliflower.webp";
-import Jackfruit from "./Jackfruit.jpg";
+import ISO_9001 from "./ISO_9001.jpeg";
+import FSSAI_certificate from "./FSSAI_certificate.jpeg";
+import Global_GAP from "./Global_GAP.jpeg";
 
-export const assets = { Logo, About_Image };
+export const assets = {
+  Logo,
+  About_Image,
+  Contact_Img,
+  FSSAI_certificate,
+  ISO_9001,
+  Global_GAP,
+};
 
 export const sliderImages = [slider_01, slider_02, slider_03];
 
@@ -316,5 +326,4 @@ export const products = [
   //   cultivationType: "Organic",
   //   packagingSize: "500gm, 1Kg, 2Kg, and loose",
   // },
-  
 ];
