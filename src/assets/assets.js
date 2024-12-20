@@ -47,7 +47,7 @@ export const sliderImages = [slider_01, slider_02, slider_03, slider_04];
 
 export const products = [
   {
-    id: 1,
+    id: "cumin-seeds",
     name: "Cumin Seeds (Cuminum cyminum)",
     img: Cumin_Seeds,
     use: "Cooking",
@@ -59,7 +59,7 @@ export const products = [
     packagingSize: "50gm, 100gm, 250gm, and loose",
   },
   {
-    id: 2,
+    id: "turmeric-powder",
     name: "Turmeric Powder (1%-2% Curcumin)",
     img: Turmeric_Powder,
     use: "Cooking",
@@ -71,7 +71,7 @@ export const products = [
     packagingSize: "200gm, 500gm, 1Kg, and loose",
   },
   {
-    id: 3,
+    id: "black-pepper",
     name: "Black Pepper",
     img: Black_Pepper,
     use: "Cooking, Medicinal",
@@ -83,7 +83,7 @@ export const products = [
     packagingSize: "50gm, 100gm, 250gm, and loose",
   },
   {
-    id: 4,
+    id: "cardamom",
     name: "Cardamom (Elettaria cardamomum)",
     img: Cardamom,
     use: "Cooking, Medicinal",
@@ -95,7 +95,7 @@ export const products = [
     packagingSize: "25gm, 50gm, 100gm, and loose",
   },
   {
-    id: 5,
+    id: "red-chillies",
     name: "Red Chillies",
     img: Chili_Powder,
     use: "Cooking",
@@ -350,6 +350,7 @@ export const certificates = [
   {
     title: "FSSAI Certification",
     image: FSSAI,
-    description: "Approval from the Food Safety and Standards Authority of India.",
+    description:
+      "Approval from the Food Safety and Standards Authority of India.",
   },
 ];

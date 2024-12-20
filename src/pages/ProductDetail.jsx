@@ -3,11 +3,11 @@ import { useParams } from "react-router-dom";
 import { products } from "../assets/assets.js";
 
 const ProductDetail = () => {
-  const { id } = useParams(); // Get the product ID from the URL
-  const product = products.find((product) => product.id === parseInt(id)); // Find the product based on the ID
+  const { id } = useParams();
+  const product = products.find((product) => product.id === id);
 
   if (!product) {
-    return <div>Product not found</div>; // Handle invalid product ID
+    return <div>Product not found</div>;
   }
 
   return (
@@ -34,7 +34,9 @@ const ProductDetail = () => {
                 <td className="px-4 py-2">{product.use}</td>
               </tr>
               <tr className="border-b border-gray-300">
-                <td className="px-4 py-2 font-semibold text-gray-700">Self Life</td>
+                <td className="px-4 py-2 font-semibold text-gray-700">
+                  Self Life
+                </td>
                 <td className="px-4 py-2">{product.selfLife}</td>
               </tr>
               <tr className="border-b border-gray-300">
@@ -42,7 +44,9 @@ const ProductDetail = () => {
                 <td className="px-4 py-2">{product.color}</td>
               </tr>
               <tr className="border-b border-gray-300">
-                <td className="px-4 py-2 font-semibold text-gray-700">Place of Origin</td>
+                <td className="px-4 py-2 font-semibold text-gray-700">
+                  Place of Origin
+                </td>
                 <td className="px-4 py-2">{product.placeOfOrigin}</td>
               </tr>
               <tr className="border-b border-gray-300">
@@ -50,11 +54,15 @@ const ProductDetail = () => {
                 <td className="px-4 py-2">{product.form}</td>
               </tr>
               <tr className="border-b border-gray-300">
-                <td className="px-4 py-2 font-semibold text-gray-700">Cultivation Type</td>
+                <td className="px-4 py-2 font-semibold text-gray-700">
+                  Cultivation Type
+                </td>
                 <td className="px-4 py-2">{product.cultivationType}</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 font-semibold text-gray-700">Packaging Size</td>
+                <td className="px-4 py-2 font-semibold text-gray-700">
+                  Packaging Size
+                </td>
                 <td className="px-4 py-2">{product.packagingSize}</td>
               </tr>
             </tbody>
