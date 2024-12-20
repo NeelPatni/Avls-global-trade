@@ -15,9 +15,9 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <main className="min-h-screen bg-gray-50 text-gray-800">
+    <main className="min-h-screen bg-gray-50 text-gray-800 overflow-auto">
       {/* Hero Slider */}
-      <section className="h-[60vh] md:h-[70vh] lg:h-[80vh]">
+      <section className="h-[60vh] md:h-[70vh] lg:h-[80vh] overflow-hidden">
         <Slider />
       </section>
 
