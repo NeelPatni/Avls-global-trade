@@ -7,6 +7,8 @@ import About from "./pages/About";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import FloatingContact from "./components/FloatingContact";
+import Certifications from "./pages/Certifications";
+import ProductDetail from "./pages/ProductDetail";
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/product-detail/:id" element={<ProductDetail />} />
+        <Route path="/certifications" element={<Certifications />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

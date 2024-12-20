@@ -1,5 +1,7 @@
 import React from "react";
+import { FaRegStar, FaRegHandPointRight, FaShieldAlt } from "react-icons/fa";  // React Icons for enhancements
 import { assets } from "../assets/assets";
+import Testimonials from "../components/Testimonials";
 
 const About = () => {
   return (
@@ -40,6 +42,149 @@ const About = () => {
               and most importantly normal quality. We also uphold business
               ethics, which helps ensure transparent business transactions with
               our international partners.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision Section */}
+      <section className="bg-gray-100 py-12">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-green-700">
+            Our Mission & Vision
+          </h2>
+          <div className="bg-green-700 w-16 h-1 rounded-full mx-auto my-4"></div>
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+            Our mission is to be a global leader in the export of
+            premium-quality agricultural products, offering the freshest and
+            most aromatic fruits, vegetables, and spices to every corner of the
+            world.
+          </p>
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto mt-4">
+            We envision a sustainable future where farmers, customers, and
+            international partners thrive together, powered by innovation and
+            ethical business practices.
+          </p>
+        </div>
+      </section>
+
+      {/* Core Values Section */}
+      <section className="py-12 px-4 md:px-16">
+        <h2 className="text-3xl font-bold text-center text-green-700">
+          Our Core Values
+        </h2>
+        <div className="bg-green-700 w-16 h-1 rounded-full mx-auto my-4"></div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mt-8">
+          <div>
+            <FaRegStar className="text-green-700 text-3xl mx-auto" />
+            <h3 className="text-xl font-semibold text-green-700 mt-4">Integrity</h3>
+            <p className="text-gray-600">
+              We conduct our business with the utmost honesty and transparency.
+            </p>
+          </div>
+          <div>
+            <FaRegHandPointRight className="text-green-700 text-3xl mx-auto" />
+            <h3 className="text-xl font-semibold text-green-700 mt-4">Quality</h3>
+            <p className="text-gray-600">
+              We ensure that our products meet the highest quality standards.
+            </p>
+          </div>
+          <div>
+            <FaShieldAlt className="text-green-700 text-3xl mx-auto" />
+            <h3 className="text-xl font-semibold text-green-700 mt-4">Sustainability</h3>
+            <p className="text-gray-600">
+              We are committed to sustainable practices in sourcing and
+              exporting.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* Team Section */}
+      <section className="py-12 px-4 bg-white">
+        <h2 className="text-3xl font-bold text-center text-green-700">
+          Meet the Team
+        </h2>
+        <div className="bg-green-700 w-16 h-1 rounded-full mx-auto my-4"></div>
+        <div className="flex flex-wrap justify-center gap-8 mt-8">
+          <div className="text-center">
+            <img
+              src={assets.TeamMember1}
+              alt="Team Member 1"
+              className="w-32 h-32 rounded-full mx-auto"
+            />
+            <h3 className="mt-4 font-semibold text-green-700">Alice Johnson</h3>
+            <p className="text-gray-600">Founder & CEO</p>
+          </div>
+          <div className="text-center">
+            <img
+              src={assets.TeamMember2}
+              alt="Team Member 2"
+              className="w-32 h-32 rounded-full mx-auto"
+            />
+            <h3 className="mt-4 font-semibold text-green-700">Bob Lee</h3>
+            <p className="text-gray-600">Operations Manager</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section className="py-12 px-4 md:px-16 bg-gray-100">
+        <h2 className="text-3xl font-bold text-center text-green-700">
+          Our Certifications
+        </h2>
+        <div className="bg-green-700 w-16 h-1 rounded-full mx-auto my-4"></div>
+        <div className="flex flex-wrap justify-center gap-8 mt-8">
+          <div className="max-w-xs">
+            <img
+              src={assets.RCMC_Certificate}
+              alt="RCMC Certificate"
+              className="w-full h-48 object-cover rounded-lg shadow-md"
+            />
+          </div>
+          <div className="max-w-xs">
+            <img
+              src={assets.APEDA_Certificate}
+              alt="APEDA Certificate"
+              className="w-full h-48 object-cover rounded-lg shadow-md"
+            />
+          </div>
+          <div className="max-w-xs">
+            <img
+              src={assets.FSSAI_Certificate}
+              alt="FSSAI Certificate"
+              className="w-full h-48 object-cover rounded-lg shadow-md"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 px-4 md:px-16 bg-white">
+        <h2 className="text-3xl font-bold text-center text-green-700">
+          Frequently Asked Questions
+        </h2>
+        <div className="bg-green-700 w-16 h-1 rounded-full mx-auto my-4"></div>
+        <div className="space-y-6 mt-8">
+          <div>
+            <h3 className="text-xl font-semibold text-green-700">
+              What products do you export?
+            </h3>
+            <p className="text-gray-600">
+              We export a variety of agricultural products, including fruits,
+              vegetables, spices, grains, and pulses.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-green-700">
+              Where are your products sourced from?
+            </h3>
+            <p className="text-gray-600">
+              Our products are sourced from certified farms and producers across
+              India.
             </p>
           </div>
         </div>

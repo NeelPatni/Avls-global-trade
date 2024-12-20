@@ -79,7 +79,7 @@ const Header = () => {
         {/* Navigation Links */}
         <nav
           className={`fixed top-0 right-0 h-full bg-[#184b44] text-white z-20 transition-transform duration-300 ease-in-out md:static md:flex md:space-x-6 md:h-auto md:bg-transparent md:translate-x-0 ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
+            isMenuOpen ? "translate-x-0 w-64" : "translate-x-full"
           }`}
         >
           <ul className="flex flex-col items-center justify-center space-y-6 mt-20 md:flex-row md:space-y-0 md:mt-0">
@@ -110,7 +110,7 @@ const Header = () => {
               </span>
               {/* Dropdown Menu */}
               {isDropdownOpen && (
-                <ul className="absolute left-0 mt-2 bg-white text-black shadow-md">
+                <ul className="absolute left-0 mt-2 bg-white text-black shadow-md font-medium">
                   <li className="px-4 py-2 hover:bg-gray-200">
                     <Link to="/products" onClick={closeMenu}>
                       Fruits & Vegetables
@@ -131,11 +131,11 @@ const Header = () => {
             </li>
             <li>
               <Link
-                to="/certificate"
+                to="/certifications"
                 className="block px-4 py-2 md:inline-block font-semibold md:hover:bg-white hover:text-black rounded-lg"
                 onClick={closeMenu}
               >
-                Memberships & Certifications
+                Certifications
               </Link>
             </li>
             <li>

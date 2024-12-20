@@ -10,7 +10,8 @@ import {
 import { assets } from "../assets/assets.js";
 import Testimonials from "../components/Testimonials.jsx";
 import FAQSection from "../components/FAQSection.jsx";
-import ProductCard from "../components/ProductCard.jsx";
+import { products } from "../assets/assets.js";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -64,9 +65,27 @@ const Home = () => {
         <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
           Our Premium Products
         </h3>
-        <ProductCard />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {products.slice(0, 5).map((product, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-md rounded-md overflow-hidden"
+            >
+              <img
+                src={product.img}
+                alt={product.name}
+                className="object-cover h-48 w-full hover:scale-105 cursor-pointer"
+              />
+              <div className="p-4">
+                <h4 className="text-lg font-semibold text-gray-700">
+                  {product.name}
+                </h4>
+              </div>
+            </div>
+          ))}
+        </div>
         <button className="px-4 py-2 my-4 rounded-md font-semibold border-2 border-[#184b44] hover:bg-[#184b44] hover:text-white">
-          All Products
+          <Link to="/products">All Products</Link>
         </button>
       </section>
 
@@ -119,7 +138,7 @@ const Home = () => {
       </section>
 
       {/* Certifications Section */}
-      {/* <section className="py-12 px-4 md:px-16 bg-gray-100">
+      <section className="py-12 px-4 md:px-16 bg-gray-100">
         <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
           Our Certifications
         </h3>
@@ -146,11 +165,13 @@ const Home = () => {
               key={index}
               className="bg-white shadow-md rounded-md overflow-hidden"
             >
-              <img
-                src={certification.img}
-                alt={certification.title}
-                className="object-cover h-48 w-full"
-              />
+              <div className="flex items-center justify-center">
+                <img
+                  src={certification.img}
+                  alt={certification.title}
+                  className="object-cover h-48 w-fit"
+                />
+              </div>
               <div className="p-4">
                 <h4 className="text-lg font-semibold text-gray-700">
                   {certification.title}
@@ -162,7 +183,7 @@ const Home = () => {
             </div>
           ))}
         </div>
-      </section> */}
+      </section>
 
       {/* Testimonials Section */}
       <Testimonials />
