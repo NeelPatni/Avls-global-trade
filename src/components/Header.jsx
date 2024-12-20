@@ -13,6 +13,10 @@ const Header = () => {
   const closeMenu = () => {
     setIsMenuOpen(false); // Close the side menu
     setIsDropdownOpen(false); // Close the dropdown menu
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Adds a smooth scrolling effect
+    });
   };
 
   return (

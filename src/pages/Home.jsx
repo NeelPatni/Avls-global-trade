@@ -12,6 +12,7 @@ import Testimonials from "../components/Testimonials.jsx";
 import FAQSection from "../components/FAQSection.jsx";
 import { products } from "../assets/assets.js";
 import { Link } from "react-router-dom";
+import { certificates } from "../assets/assets";
 
 const Home = () => {
   return (
@@ -142,43 +143,22 @@ const Home = () => {
         <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
           Our Certifications
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              title: "ISO 9001:2015",
-              description: "Certified for Quality Management Systems.",
-              img: assets.ISO_9001,
-            },
-            {
-              title: "FSSAI Certified",
-              description: "Ensuring food safety and hygiene standards.",
-              img: assets.FSSAI_certificate,
-            },
-            {
-              title: "Global GAP",
-              description:
-                "Good Agricultural Practices certification for safe and sustainable agriculture.",
-              img: assets.Global_GAP,
-            },
-          ].map((certification, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {certificates.map((cert, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-md overflow-hidden"
+              className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 duration-300"
             >
-              <div className="flex items-center justify-center">
-                <img
-                  src={certification.img}
-                  alt={certification.title}
-                  className="object-cover h-48 w-fit"
-                />
-              </div>
+              <img
+                src={cert.image}
+                alt={cert.title}
+                className="w-full h-48 object-cover"
+              />
               <div className="p-4">
-                <h4 className="text-lg font-semibold text-gray-700">
-                  {certification.title}
-                </h4>
-                <p className="text-sm text-gray-600 mt-2">
-                  {certification.description}
-                </p>
+                <h3 className="text-2xl font-semibold text-green-600 mb-2">
+                  {cert.title}
+                </h3>
+                <p className="text-gray-700 text-sm">{cert.description}</p>
               </div>
             </div>
           ))}

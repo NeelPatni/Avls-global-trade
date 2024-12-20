@@ -1,7 +1,8 @@
 import React from "react";
-import { FaRegStar, FaRegHandPointRight, FaShieldAlt } from "react-icons/fa";  // React Icons for enhancements
+import { FaRegStar, FaRegHandPointRight, FaShieldAlt } from "react-icons/fa"; // React Icons for enhancements
 import { assets } from "../assets/assets";
 import Testimonials from "../components/Testimonials";
+import { certificates } from "../assets/assets";
 
 const About = () => {
   return (
@@ -77,21 +78,27 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mt-8">
           <div>
             <FaRegStar className="text-green-700 text-3xl mx-auto" />
-            <h3 className="text-xl font-semibold text-green-700 mt-4">Integrity</h3>
+            <h3 className="text-xl font-semibold text-green-700 mt-4">
+              Integrity
+            </h3>
             <p className="text-gray-600">
               We conduct our business with the utmost honesty and transparency.
             </p>
           </div>
           <div>
             <FaRegHandPointRight className="text-green-700 text-3xl mx-auto" />
-            <h3 className="text-xl font-semibold text-green-700 mt-4">Quality</h3>
+            <h3 className="text-xl font-semibold text-green-700 mt-4">
+              Quality
+            </h3>
             <p className="text-gray-600">
               We ensure that our products meet the highest quality standards.
             </p>
           </div>
           <div>
             <FaShieldAlt className="text-green-700 text-3xl mx-auto" />
-            <h3 className="text-xl font-semibold text-green-700 mt-4">Sustainability</h3>
+            <h3 className="text-xl font-semibold text-green-700 mt-4">
+              Sustainability
+            </h3>
             <p className="text-gray-600">
               We are committed to sustainable practices in sourcing and
               exporting.
@@ -103,34 +110,6 @@ const About = () => {
       {/* Testimonials Section */}
       <Testimonials />
 
-      {/* Team Section */}
-      <section className="py-12 px-4 bg-white">
-        <h2 className="text-3xl font-bold text-center text-green-700">
-          Meet the Team
-        </h2>
-        <div className="bg-green-700 w-16 h-1 rounded-full mx-auto my-4"></div>
-        <div className="flex flex-wrap justify-center gap-8 mt-8">
-          <div className="text-center">
-            <img
-              src={assets.TeamMember1}
-              alt="Team Member 1"
-              className="w-32 h-32 rounded-full mx-auto"
-            />
-            <h3 className="mt-4 font-semibold text-green-700">Alice Johnson</h3>
-            <p className="text-gray-600">Founder & CEO</p>
-          </div>
-          <div className="text-center">
-            <img
-              src={assets.TeamMember2}
-              alt="Team Member 2"
-              className="w-32 h-32 rounded-full mx-auto"
-            />
-            <h3 className="mt-4 font-semibold text-green-700">Bob Lee</h3>
-            <p className="text-gray-600">Operations Manager</p>
-          </div>
-        </div>
-      </section>
-
       {/* Certifications Section */}
       <section className="py-12 px-4 md:px-16 bg-gray-100">
         <h2 className="text-3xl font-bold text-center text-green-700">
@@ -138,26 +117,25 @@ const About = () => {
         </h2>
         <div className="bg-green-700 w-16 h-1 rounded-full mx-auto my-4"></div>
         <div className="flex flex-wrap justify-center gap-8 mt-8">
-          <div className="max-w-xs">
-            <img
-              src={assets.RCMC_Certificate}
-              alt="RCMC Certificate"
-              className="w-full h-48 object-cover rounded-lg shadow-md"
-            />
-          </div>
-          <div className="max-w-xs">
-            <img
-              src={assets.APEDA_Certificate}
-              alt="APEDA Certificate"
-              className="w-full h-48 object-cover rounded-lg shadow-md"
-            />
-          </div>
-          <div className="max-w-xs">
-            <img
-              src={assets.FSSAI_Certificate}
-              alt="FSSAI Certificate"
-              className="w-full h-48 object-cover rounded-lg shadow-md"
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {certificates.map((cert, index) => (
+              <div
+                key={index}
+                className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 duration-300"
+              >
+                <img
+                  src={cert.image}
+                  alt={cert.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-2xl font-semibold text-green-600 mb-2">
+                    {cert.title}
+                  </h3>
+                  <p className="text-gray-700 text-sm">{cert.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

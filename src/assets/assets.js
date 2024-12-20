@@ -30,9 +30,9 @@ import FSSAI_certificate from "./FSSAI_certificate.jpeg";
 import Global_GAP from "./Global_GAP.jpeg";
 
 // certificates images
-import RCMC_PDF from "./RCMC_PDF.pdf";
-import APEDA_PDF from "./APEDA_PDF.pdf";
-import FSSAI_PDF from "./FSSAI_PDF.pdf";
+import RCMC from "./RCMC.jpg";
+import APEDA from "./APEDA.jpg";
+import FSSAI from "./FSSAI.jpg";
 
 export const assets = {
   Logo,
@@ -336,4 +336,20 @@ export const products = [
   // },
 ];
 
-export const certificates = [RCMC_PDF, APEDA_PDF, FSSAI_PDF];
+export const certificates = [
+  {
+    title: "RCMC Certification",
+    image: RCMC,
+    description: "Certificate of Registration as Exporter with APEDA.",
+  },
+  {
+    title: "CE Certification",
+    image: APEDA,
+    description: "Compliance with European Union product safety standards.",
+  },
+  {
+    title: "FSSAI Certification",
+    image: FSSAI,
+    description: "Approval from the Food Safety and Standards Authority of India.",
+  },
+];
