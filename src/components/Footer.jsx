@@ -34,11 +34,6 @@ const Footer = () => {
                   Contact Us
                 </a>
               </li>
-              <li className="mb-2">
-                <a href="#" className="hover:underline">
-                  Current Jobs
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -68,15 +63,16 @@ const Footer = () => {
           <div>
             <h2 className="text-lg font-bold mb-4">Aroma International</h2>
             <p className="mb-2 flex items-center hover:cursor-pointer hover:underline hover:text-blue-600">
-              <MdLocationOn className="mr-2 text-orange-500" size={24}/>
-              GF-8, Akshar Plaza, Govindpura Jakatnaka, Padra Vadodara, India - 391440
+              <MdLocationOn className="mr-2 text-orange-500" size={24} />
+              GF-8, Akshar Plaza, Govindpura Jakatnaka, Padra Vadodara, India -
+              391440
             </p>
             <p className="mb-2 flex items-center hover:cursor-pointer hover:underline hover:text-blue-600">
-              <FaPhoneAlt className="mr-2 text-green-500" size={24}/>
+              <FaPhoneAlt className="mr-2 text-green-500" size={24} />
               +91 82380 82910
             </p>
             <p className="mb-2 flex items-center hover:cursor-pointer hover:underline hover:text-blue-600">
-              <MdOutlineMail className="mr-2 text-blue-500" size={24}/>
+              <MdOutlineMail className="mr-2 text-blue-500" size={24} />
               info@aroma-international.co.in
             </p>
 
@@ -99,10 +95,18 @@ const Footer = () => {
         {/* Footer Bottom Section */}
         <div className="mt-8 text-center text-sm">
           <p>
-            All Rights Reserved. <span className="font-bold">Aroma International</span>
+            All Rights Reserved.{" "}
+            <span className="font-bold">Aroma International</span>
           </p>
           <p>
-            Managed By <a href="https://www.taniyawebfix.com/" target="_blank" className="hover:cursor-pointer hover:underline text-blue-600">TaniyaWebfix Pvt.Ltd</a>
+            Managed By{" "}
+            <a
+              href="https://www.taniyawebfix.com/"
+              target="_blank"
+              className="hover:cursor-pointer hover:underline text-blue-600"
+            >
+              TaniyaWebfix Pvt.Ltd
+            </a>
           </p>
         </div>
       </div>

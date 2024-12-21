@@ -57,6 +57,7 @@ export const products = [
     form: "Seeds",
     cultivationType: "Natural",
     packagingSize: "50gm, 100gm, 250gm, and loose",
+    description: "Aromatic seeds that add a rich, earthy flavor to dishes.",
   },
   {
     id: "turmeric-powder",
@@ -69,6 +70,8 @@ export const products = [
     form: "Powder",
     cultivationType: "Natural",
     packagingSize: "200gm, 500gm, 1Kg, and loose",
+    description:
+      "A golden spice known for its vibrant color and health benefits.",
   },
   {
     id: "black-pepper",
@@ -81,6 +84,7 @@ export const products = [
     form: "Seeds",
     cultivationType: "Natural",
     packagingSize: "50gm, 100gm, 250gm, and loose",
+    description: "A versatile spice that adds a bold, spicy kick to recipes.",
   },
   {
     id: "cardamom",
@@ -93,6 +97,7 @@ export const products = [
     form: "Pods",
     cultivationType: "Natural",
     packagingSize: "25gm, 50gm, 100gm, and loose",
+    description: "A fragrant spice with a sweet and exotic flavor profile.",
   },
   {
     id: "red-chillies",
@@ -105,6 +110,7 @@ export const products = [
     form: "Powder",
     cultivationType: "Natural",
     packagingSize: "50gm, 100gm, 250gm, and loose",
+    description: "A fiery spice that adds heat and vibrant color to meals.",
   },
   // {
   //   id: 6,

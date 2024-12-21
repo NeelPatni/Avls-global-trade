@@ -61,9 +61,7 @@ const Header = () => {
       <div className="flex justify-between items-center px-4 md:px-12 py-2 bg-[#184b44]">
         {/* Logo */}
         <div className="flex items-center space-x-4">
-          <Link to="/">
-            <img src={assets.Logo} alt="Company Logo" className="h-16" />
-          </Link>
+
           <div>
             <Link to="/">
               <h1 className="text-3xl font-bold text-white">AROMA</h1>
