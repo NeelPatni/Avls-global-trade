@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { assets } from "../assets/assets.js";
 import { MdOutlineMail } from "react-icons/md";
-import { FaPhoneVolume } from "react-icons/fa6";
+import { FaPhoneVolume } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { FaFileDownload } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -61,7 +60,6 @@ const Header = () => {
       <div className="flex justify-between items-center px-4 md:px-12 py-2 bg-[#184b44]">
         {/* Logo */}
         <div className="flex items-center space-x-4">
-
           <div>
             <Link to="/">
               <h1 className="text-3xl font-bold text-white">AROMA</h1>
@@ -88,7 +86,7 @@ const Header = () => {
             <li>
               <Link
                 to="/"
-                className="block px-4 py-2 md:inline-block font-semibold md:hover:bg-white hover:text-black rounded-lg"
+                className="block px-4 py-2 md:inline-block font-semibold hover:text-yellow-400 rounded-lg"
                 onClick={closeMenu}
               >
                 Home
@@ -97,35 +95,47 @@ const Header = () => {
             <li>
               <Link
                 to="/about"
-                className="block px-4 py-2 md:inline-block font-semibold md:hover:bg-white hover:text-black rounded-lg"
+                className="block px-4 py-2 md:inline-block font-semibold hover:text-yellow-400 rounded-lg"
                 onClick={closeMenu}
               >
                 About Us
               </Link>
             </li>
             <li
-              className="relative block px-4 py-2 md:inline-block font-semibold cursor-pointer md:hover:bg-white hover:text-black rounded-lg"
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="relative block px-4 py-2 md:inline-block font-semibold cursor-pointer hover:text-yellow-400 rounded-lg"
+              onMouseEnter={() => setIsDropdownOpen(true)}
+              onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <span>
-                Our Products <i className="fas fa-caret-down"></i>
-              </span>
+              <Link to="/products">Products</Link>
               {/* Dropdown Menu */}
               {isDropdownOpen && (
-                <ul className="absolute left-0 mt-2 bg-white text-black shadow-md font-medium">
-                  <li className="px-4 py-2 hover:bg-gray-200">
-                    <Link to="/products" onClick={closeMenu}>
-                      Fruits & Vegetables
+                <ul className="absolute left-0 mt-2 bg-white text-black shadow-md rounded-md font-medium">
+                  <li className="px-6 py-2 hover:bg-gray-200">
+                    <Link to="/product-detail/cumin-seeds" onClick={closeMenu}>
+                      Cumin
                     </Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-200">
-                    <Link to="/products" onClick={closeMenu}>
-                      Spices
+                  <li className="px-6 py-2 hover:bg-gray-200">
+                    <Link
+                      to="/product-detail/turmeric-powder"
+                      onClick={closeMenu}
+                    >
+                      Turmeric
                     </Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-200">
-                    <Link to="/products" onClick={closeMenu}>
-                      Grains & Pulses
+                  <li className="px-6 py-2 hover:bg-gray-200">
+                    <Link to="/product-detail/black-pepper" onClick={closeMenu}>
+                      Black Pepper
+                    </Link>
+                  </li>
+                  <li className="px-6 py-2 hover:bg-gray-200">
+                    <Link to="/product-detail/cardamom" onClick={closeMenu}>
+                      Cardamom
+                    </Link>
+                  </li>
+                  <li className="px-6 py-2 hover:bg-gray-200">
+                    <Link to="/product-detail/red-chillies" onClick={closeMenu}>
+                      Red Chillies
                     </Link>
                   </li>
                 </ul>
@@ -134,7 +144,7 @@ const Header = () => {
             <li>
               <Link
                 to="/certifications"
-                className="block px-4 py-2 md:inline-block font-semibold md:hover:bg-white hover:text-black rounded-lg"
+                className="block px-4 py-2 md:inline-block font-semibold hover:text-yellow-400 rounded-lg"
                 onClick={closeMenu}
               >
                 Certifications
@@ -143,7 +153,7 @@ const Header = () => {
             <li>
               <Link
                 to="/contact"
-                className="block px-4 py-2 md:inline-block font-semibold md:hover:bg-white hover:text-black rounded-lg"
+                className="block px-4 py-2 md:inline-block font-semibold hover:text-yellow-400 rounded-lg"
                 onClick={closeMenu}
               >
                 Contact Us
