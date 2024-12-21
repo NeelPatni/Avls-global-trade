@@ -109,7 +109,7 @@ const Header = () => {
               <Link to="/products">Products</Link>
               {/* Dropdown Menu */}
               {isDropdownOpen && (
-                <ul className="absolute left-0 mt-2 bg-white text-black shadow-md rounded-md font-medium">
+                <ul className="absolute left-0 mt-2 bg-white text-black shadow-md rounded-md font-medium text-nowrap">
                   <li className="px-6 py-2 hover:bg-gray-200">
                     <Link to="/product-detail/cumin-seeds" onClick={closeMenu}>
                       Cumin

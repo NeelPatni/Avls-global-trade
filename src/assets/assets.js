@@ -30,9 +30,9 @@ import FSSAI_certificate from "./FSSAI_certificate.jpeg";
 import Global_GAP from "./Global_GAP.jpeg";
 
 // certificates images
-import RCMC from "./RCMC.jpg";
-import APEDA from "./APEDA.jpg";
-import FSSAI from "./FSSAI.jpg";
+import RCMC from "./RCMC.png";
+import APEDA from "./APEDA.png";
+import FSSAI from "./FSSAI.png";
 
 export const assets = {
   Logo,

@@ -13,6 +13,8 @@ import FAQSection from "../components/FAQSection.jsx";
 import { products } from "../assets/assets.js";
 import { Link } from "react-router-dom";
 import { certificates } from "../assets/assets";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Home = () => {
   return (
@@ -66,32 +68,34 @@ const Home = () => {
         <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
           Our Premium Products
         </h3>
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {products.slice(0,5).map((product, index) => (
-                <div
-                  key={index}
-                  className="bg-white shadow-md rounded-md overflow-hidden border border-gray-200 p-4 min-h-[400px]" // Set a minimum height
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {products.slice(0, 5).map((product, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-md rounded-md overflow-hidden border border-gray-200 p-4 min-h-[400px]" // Set a minimum height
+            >
+              <img
+                src={product.img}
+                alt={product.name}
+                className="object-cover h-56 w-full hover:scale-105 transition-transform duration-300 cursor-pointer" // Increased image height
+              />
+              <div className="flex flex-col items-center justify-center p-4 text-center">
+                <h4 className="text-lg font-semibold text-gray-800">
+                  {product.name}
+                </h4>
+                <p className="text-sm text-gray-600 my-2">
+                  {product.description.trim().split(".")[0] + "."}
+                </p>
+                <Link
+                  to={`/product-detail/${product.id}`}
+                  className="bg-[#184b44] text-white font-medium py-2 px-4 rounded hover:bg-[#0f312d] transition-colors duration-300"
                 >
-                  <img
-                    src={product.img}
-                    alt={product.name}
-                    className="object-cover h-56 w-full hover:scale-105 transition-transform duration-300 cursor-pointer" // Increased image height
-                  />
-                  <div className="flex flex-col items-center justify-center p-4 text-center">
-                    <h4 className="text-lg font-semibold text-gray-800">
-                      {product.name}
-                    </h4>
-                    <p className="text-sm text-gray-600 my-2">{product.description.trim().split('.')[0] + '.'}</p>
-                    <Link
-                      to={`/product-detail/${product.id}`}
-                      className="bg-[#184b44] text-white font-medium py-2 px-4 rounded hover:bg-[#0f312d] transition-colors duration-300"
-                    >
-                      Read More
-                    </Link>
-                  </div>
-                </div>
-              ))}
+                  Read More
+                </Link>
+              </div>
             </div>
+          ))}
+        </div>
         <button className="px-4 py-2 my-4 rounded-md font-semibold border-2 border-[#184b44] hover:bg-[#184b44] hover:text-white">
           <Link to="/products">All Products</Link>
         </button>
@@ -146,7 +150,7 @@ const Home = () => {
       </section>
 
       {/* Certifications Section */}
-      <section className="py-12 px-4 md:px-16 bg-gray-100">
+      {/* <section className="py-12 px-4 md:px-16 bg-gray-100">
         <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
           Our Certifications
         </h3>
@@ -156,11 +160,13 @@ const Home = () => {
               key={index}
               className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 duration-300"
             >
-              <img
-                src={cert.image}
-                alt={cert.title}
-                className="w-full h-48 object-cover"
-              />
+              <div className="flex justify-center items-center h-64 bg-gray-200">
+                <img
+                  src={cert.image}
+                  alt={cert.title}
+                  className="h-full max-h-56 object-contain"
+                />
+              </div>
               <div className="p-4">
                 <h3 className="text-2xl font-semibold text-green-600 mb-2">
                   {cert.title}
@@ -169,6 +175,35 @@ const Home = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section> */}
+      <section className="py-12 px-4 md:px-16">
+        <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
+          Our Certifications
+        </h3>
+        <div className="max-w-screen-lg mx-auto">
+          <Carousel
+            showThumbs={false}
+            showStatus={false}
+            infiniteLoop
+            autoPlay
+            interval={3000}
+            showIndicators={false}
+            centerMode
+            className="rounded-lg"
+            centerSlidePercentage={100} // Default for small devices
+            renderIndicator={false}
+          >
+            {certificates.map((cert, index) => (
+              <div key={index} className="flex justify-center items-center">
+                <img
+                  src={cert.image}
+                  alt={cert.title}
+                  className="h-64 object-contain w-full"
+                />
+              </div>
+            ))}
+          </Carousel>
         </div>
       </section>
 

@@ -17,7 +17,7 @@ const ProductDetail = () => {
     <div className="max-w-screen-lg mx-auto p-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Left side: Product Image */}
-        <div>
+        <div className="flex items-center justify-center">
           <img
             src={product.img}
             alt={product.name}
