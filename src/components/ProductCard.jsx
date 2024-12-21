@@ -19,7 +19,7 @@ const ProductCard = () => {
             <h4 className="text-lg font-semibold text-gray-800">
               {product.name}
             </h4>
-            <p className="text-sm text-gray-600 my-2">{product.description}</p>
+            <p className="text-sm text-gray-600 my-2">{product.description.trim().split('.')[0] + '.'}</p>
             <Link
               to={`/product-detail/${product.id}`}
               className="bg-[#184b44] text-white font-medium py-2 px-4 rounded hover:bg-[#0f312d] transition-colors duration-300"
