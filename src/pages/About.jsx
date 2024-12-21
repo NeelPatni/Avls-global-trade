@@ -3,6 +3,8 @@ import { FaRegStar, FaRegHandPointRight, FaShieldAlt } from "react-icons/fa"; //
 import { assets } from "../assets/assets";
 import Testimonials from "../components/Testimonials";
 import { certificates } from "../assets/assets";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const About = () => {
   return (
@@ -111,32 +113,33 @@ const About = () => {
       <Testimonials />
 
       {/* Certifications Section */}
-      <section className="py-12 px-4 md:px-16 bg-gray-100">
-        <h2 className="text-3xl font-bold text-center text-green-700">
+      <section className="py-12 px-4 md:px-16">
+        <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
           Our Certifications
-        </h2>
-        <div className="bg-green-700 w-16 h-1 rounded-full mx-auto my-4"></div>
-        <div className="flex flex-wrap justify-center gap-8 mt-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        </h3>
+        <div className="max-w-screen-lg mx-auto">
+          <Carousel
+            showThumbs={false}
+            showStatus={false}
+            infiniteLoop
+            autoPlay
+            interval={3000}
+            showIndicators={false}
+            centerMode
+            className="rounded-lg"
+            centerSlidePercentage={100} // Default for small devices
+            renderIndicator={false}
+          >
             {certificates.map((cert, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 duration-300"
-              >
+              <div key={index} className="flex justify-center items-center">
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="w-full h-48 object-cover"
+                  className="h-64 object-contain w-full"
                 />
-                <div className="p-4">
-                  <h3 className="text-2xl font-semibold text-green-600 mb-2">
-                    {cert.title}
-                  </h3>
-                  <p className="text-gray-700 text-sm">{cert.description}</p>
-                </div>
               </div>
             ))}
-          </div>
+          </Carousel>
         </div>
       </section>
 
