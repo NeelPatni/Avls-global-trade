@@ -40,7 +40,7 @@ const Header = () => {
         {/* GST Information */}
         <div className="flex flex-col md:flex-row gap-6 text-center sm:text-left">
           <p>
-            GST No.<span className="font-semibold"> 27AADCP3082B1ZQ</span>
+            GST No.<span className="font-semibold"> 24AHQPP9217M1ZM</span>
           </p>
           <h1 className="hidden md:flex items-center gap-2  hover:underline hover:text-yellow-400 cursor-pointer">
             <FaFileDownload size={18} color="#1D4ED8" />{" "}
