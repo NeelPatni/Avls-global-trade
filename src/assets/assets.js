@@ -10,24 +10,7 @@ import Turmeric_Powder from "./Turmeric_Powder.jpg";
 import Black_Pepper from "./Black_Pepper.jpg";
 import Cardamom from "./Cardamom.jpg";
 import Chili_Powder from "./Chili_Powder.jpg";
-// import Ginger_Powder from "./Ginger_Powder.jpg";
-// import Coriander_Powder from "./Coriander_Powder.jpg";
-// import Fennel_Seeds from "./Fennel_Seeds.jpg";
-// import Cloves from "./Cloves.jpg";
-// import Saffron from "./Saffron.jpg";
-// import Mango_Alphonso from "./Mango_Alphonso.webp";
-// import Pomegranate from "./Pomegranate.jpg";
-// import Basmati_Rice from "./Basmati_Rice.jpg";
-// import Fresh_Turmeric_Root from "./Fresh_Turmeric_Root.jpg";
-// import Red_Onions from "./Red_Onions.jpg";
-// import Chana_Dal from "./Chana_Dal.jpg";
-// import Sweet_Potato from "./Sweet_Potato.jpg";
-// import Cauliflower from "./Cauliflower.webp";
-
-// certificates icons
-import ISO_9001 from "./ISO_9001.jpeg";
-import FSSAI_certificate from "./FSSAI_certificate.jpeg";
-import Global_GAP from "./Global_GAP.jpeg";
+import Basmati_Rice from "./Basmati_Rice.jpg";
 
 // certificates images
 import RCMC from "./RCMC.png";
@@ -38,9 +21,6 @@ export const assets = {
   Logo,
   About_Image,
   Contact_Img,
-  FSSAI_certificate,
-  ISO_9001,
-  Global_GAP,
 };
 
 export const sliderImages = [slider_01, slider_02, slider_03, slider_04];
@@ -115,6 +95,20 @@ export const products = [
     packagingSize: "50gm, 100gm, 250gm, and loose",
     description:
       "Red Chillies are a fiery, vibrant spice that adds both heat and rich color to your meals. Originating from the Capsicum annuum plant, these dried red peppers are ground into powder and used to spice up a wide range of dishes, from curries and soups to stir-fries and marinades. Red chilli powder is known for its intense heat, but it also contributes a subtle smoky, slightly sweet flavor depending on the variety. Aside from its role in cooking, red chillies also have medicinal properties, particularly in boosting metabolism and supporting cardiovascular health. Whether you prefer mild or fiery heat, red chillies are essential for adding depth, spice, and color to your culinary creations.",
+  },
+  {
+    id: "basmati-rice",
+    name: "Basmati Rice",
+    img: Basmati_Rice,
+    use: "Cooking",
+    selfLife: "12 to 24 months",
+    color: "White, Brown",
+    placeOfOrigin: "Punjab India",
+    form: "Grains",
+    cultivationType: "Natural",
+    packagingSize: "1Kg, 5Kg, 10Kg, and loose",
+    description:
+      "Basmati Rice is a premium long-grain rice variety known for its unique aroma and fluffy texture. It originates from the fertile regions of Punjab, India, where it is naturally cultivated to maintain its authentic quality. Revered in Indian and Middle Eastern cuisines, Basmati Rice is perfect for preparing biryanis, pilafs, and steamed dishes. The grains remain separate and non-sticky after cooking, making it ideal for festive meals and daily consumption alike. Rich in flavor and nutrition, this rice is a staple that complements a variety of dishes. With a shelf life of 12 to 24 months, Basmati Rice ensures freshness and quality in every grain.",
   },
   // {
   //   id: 6,

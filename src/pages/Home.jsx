@@ -47,8 +47,8 @@ const Home = () => {
               AROMA International is an export-focused company based in Padra,
               Vadodara, motivated by government initiatives and goals for
               imports and exports. With our global business partners, we trade
-              in the export of premium quality Indian-origin "Fruits and
-              Vegetables," "Spices," and "Grains and Pulses" at the best prices.
+              in the export of premium quality Indian-origin "Spices," and
+              "Grains and Pulses" at the best prices.
             </p>
             <p className="mt-4 text-lg md:text-xl text-gray-600 leading-relaxed">
               Our products are clean and free of contamination, and the market
@@ -69,7 +69,7 @@ const Home = () => {
           Our Premium Products
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.slice(0, 5).map((product, index) => (
+          {products.slice(0, 6).map((product, index) => (
             <div
               key={index}
               className="bg-white shadow-md rounded-md overflow-hidden border border-gray-200 p-4 min-h-[400px]" // Set a minimum height
@@ -150,60 +150,44 @@ const Home = () => {
       </section>
 
       {/* Certifications Section */}
-      {/* <section className="py-12 px-4 md:px-16 bg-gray-100">
-        <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
-          Our Certifications
-        </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {certificates.map((cert, index) => (
-            <div
-              key={index}
-              className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 duration-300"
-            >
-              <div className="flex justify-center items-center h-64 bg-gray-200">
-                <img
-                  src={cert.image}
-                  alt={cert.title}
-                  className="h-full max-h-56 object-contain"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="text-2xl font-semibold text-green-600 mb-2">
-                  {cert.title}
-                </h3>
-                <p className="text-gray-700 text-sm">{cert.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section> */}
       <section className="py-12 px-4 md:px-16">
-        <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
-          Our Certifications
-        </h3>
-        <div className="max-w-screen-lg mx-auto">
-          <Carousel
-            showThumbs={false}
-            showStatus={false}
-            infiniteLoop
-            autoPlay
-            interval={3000}
-            showIndicators={false}
-            centerMode
-            className="rounded-lg"
-            centerSlidePercentage={100} // Default for small devices
-            renderIndicator={false}
-          >
-            {certificates.map((cert, index) => (
-              <div key={index} className="flex justify-center items-center">
-                <img
-                  src={cert.image}
-                  alt={cert.title}
-                  className="h-64 object-contain w-full"
-                />
-              </div>
-            ))}
-          </Carousel>
+        <div className="flex flex-col md:flex-row items-center max-w-screen-lg mx-auto">
+          {/* Left Side: Text Section */}
+          <div className="md:w-1/3 flex flex-col justify-center items-center text-center md:text-left mb-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
+              Our Certifications
+            </h3>
+            <p className="text-gray-500">We are FSSAI & ISO certified.</p>
+          </div>
+
+          {/* Right Side: Carousel Section */}
+          <div className="md:w-2/3">
+            <Carousel
+              showThumbs={false}
+              showStatus={false}
+              infiniteLoop
+              autoPlay
+              interval={3000}
+              centerMode
+              centerSlidePercentage={60}
+              className="rounded-lg"
+            >
+              {certificates.map((cert, index) => (
+                <div key={index} className="flex flex-col items-center">
+                  <div className="border-2 border-gray-300 rounded-lg p-4 shadow-lg bg-white">
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="h-64 object-contain w-full"
+                    />
+                  </div>
+                  <p className="mt-4 text-center text-gray-700 font-medium">
+                    {cert.title}
+                  </p>
+                </div>
+              ))}
+            </Carousel>
+          </div>
         </div>
       </section>
 
@@ -223,7 +207,7 @@ const Home = () => {
           </div>
           <div className="flex items-center space-x-4">
             <FaEnvelope size={24} />
-            <p className="text-lg">info@aroma-international.co.in</p>
+            <p className="text-lg">info@aroma-international.com</p>
           </div>
         </div>
       </section>

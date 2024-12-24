@@ -107,17 +107,20 @@ const Contact = () => {
             You can also reach us directly using the details below.
           </p>
           <div className="space-y-4">
-            <div className="flex items-center justify-center gap-3">
-              <FaPhoneAlt className="text-green-700 text-xl" />
+            <div className="flex items-center justify-center gap-2">
+              <FaPhoneAlt className="text-green-700 text-xl" size={24}/>
               <p className="text-gray-800">+91 82380 82910</p>
             </div>
-            <div className="flex items-center justify-center gap-3">
-              <FaEnvelope className="text-green-700 text-xl" />
-              <p className="text-gray-800">info@aroma-international.co.in</p>
+            <div className="flex items-center justify-center gap-2">
+              <FaEnvelope className="text-green-700 text-xl" size={24}/>
+              <p className="text-gray-800">info@aroma-international.com</p>
             </div>
-            <div className="flex items-center justify-center gap-3">
-              <FaMapMarkerAlt className="text-green-700 text-xl" />
-              <p className="text-gray-800">Padra, Vadodara, Gujarat, India</p>
+            <div className="flex items-center justify-center gap-2">
+              <FaMapMarkerAlt className="text-green-700 text-xl" size={24} />
+              <p className="text-gray-800 text-wrap">
+                GF-8, Akshar Plaza, Govindpura Jakatnaka, Padra Vadodara, India
+                - 391440
+              </p>
             </div>
           </div>
           <div className="mt-8">

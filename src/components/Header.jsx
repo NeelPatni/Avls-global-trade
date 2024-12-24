@@ -28,7 +28,7 @@ const Header = () => {
             <MdOutlineMail size={18} color="#4A90E2" />{" "}
             {/* Light Blue for email */}
             <span className="text-center sm:text-left">
-              info@aroma-international.co.in
+              info@aroma-international.com{" "}
             </span>
           </div>
           <div className="flex items-center gap-2">
@@ -136,6 +136,11 @@ const Header = () => {
                   <li className="px-6 py-2 hover:bg-gray-200">
                     <Link to="/product-detail/red-chillies" onClick={closeMenu}>
                       Red Chillies
+                    </Link>
+                  </li>
+                  <li className="px-6 py-2 hover:bg-gray-200">
+                    <Link to="/product-detail/basmati-rice" onClick={closeMenu}>
+                      Basmati Rice
                     </Link>
                   </li>
                 </ul>

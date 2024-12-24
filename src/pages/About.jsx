@@ -34,8 +34,8 @@ const About = () => {
               AROMA International is an export-focused company based in Padra,
               Vadodara, motivated by government initiatives and goals for
               imports and exports. With our global business partners, we trade
-              in the export of premium quality Indian-origin "Fruits and
-              Vegetables," "Spices," and "Grains and Pulses" at the best prices.
+              in the export of premium quality Indian-origin "Spices," and
+              "Grains and Pulses" at the best prices.
             </p>
             <p className="mt-4 text-lg md:text-xl text-gray-600 leading-relaxed">
               Our products are clean and free of contamination, and the market

@@ -27,10 +27,10 @@ const ProductDetail = () => {
 
         {/* Right side: Product Title and Description */}
         <div>
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
             {product.name}
           </h2>
-          <p className="text-lg text-gray-600 mb-6 text-justify">
+          <p className="text-md text-gray-600 mb-6 text-justify">
             {product.description}
           </p>
         </div>

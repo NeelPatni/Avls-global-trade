@@ -15,22 +15,22 @@ const Footer = () => {
             <h2 className="text-lg font-bold mb-4">General Links</h2>
             <ul>
               <li className="mb-2">
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                   Home
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#" className="hover:underline">
+                <a href="/about" className="hover:underline">
                   About Us
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#" className="hover:underline">
-                  Our Products
+                <a href="/certifications" className="hover:underline">
+                  Certifications
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#" className="hover:underline">
+                <a href="/contact" className="hover:underline">
                   Contact Us
                 </a>
               </li>
@@ -42,18 +42,48 @@ const Footer = () => {
             <h2 className="text-lg font-bold mb-4">Our Products</h2>
             <ul>
               <li className="mb-2">
-                <a href="#" className="hover:underline">
-                  Powder Spices
+                <a
+                  href="/product-detail/cumin-seeds"
+                  className="hover:underline"
+                >
+                  Cumin
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#" className="hover:underline">
-                  Blended Spices
+                <a
+                  href="/product-detail/turmeric-powder"
+                  className="hover:underline"
+                >
+                  Turmeric
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#" className="hover:underline">
-                  Whole Spices
+                <a
+                  href="/product-detail/black-pepper"
+                  className="hover:underline"
+                >
+                  Black Pepper
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="/product-detail/cardamom" className="hover:underline">
+                  Cardamom
+                </a>
+              </li>
+              <li className="mb-2">
+                <a
+                  href="/product-detail/red-chillies"
+                  className="hover:underline"
+                >
+                  Red Chillies
+                </a>
+              </li>
+              <li className="mb-2">
+                <a
+                  href="/product-detail/basmati-rice"
+                  className="hover:underline"
+                >
+                  Basmati Rice
                 </a>
               </li>
             </ul>
@@ -62,18 +92,18 @@ const Footer = () => {
           {/* Contact Details Section */}
           <div>
             <h2 className="text-lg font-bold mb-4">Aroma International</h2>
-            <p className="mb-2 flex items-center hover:cursor-pointer hover:underline hover:text-blue-600">
+            <p className="mb-2 flex items-center hover:cursor-pointer">
               <MdLocationOn className="mr-2 text-orange-500" size={24} />
               GF-8, Akshar Plaza, Govindpura Jakatnaka, Padra Vadodara, India -
               391440
             </p>
-            <p className="mb-2 flex items-center hover:cursor-pointer hover:underline hover:text-blue-600">
+            <p className="mb-2 flex items-center hover:cursor-pointer">
               <FaPhoneAlt className="mr-2 text-green-500" size={24} />
               +91 82380 82910
             </p>
-            <p className="mb-2 flex items-center hover:cursor-pointer hover:underline hover:text-blue-600">
+            <p className="mb-2 flex items-center hover:cursor-pointer">
               <MdOutlineMail className="mr-2 text-blue-500" size={24} />
-              info@aroma-international.co.in
+              info@aroma-international.com
             </p>
 
             {/* Social Media Links */}
