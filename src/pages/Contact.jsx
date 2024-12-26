@@ -25,8 +25,8 @@ const Contact = () => {
               Get in Touch
             </h1>
             <p className="text-gray-700 mb-8">
-              We'd love to hear from you. Please fill out the form, and our team
-              will get back to you as soon as possible!
+              Have questions or need assistance? Drop us a message, and our
+              friendly team will reach out to you shortly. We're here to help!
             </p>
 
             <form className="space-y-6">
@@ -108,11 +108,11 @@ const Contact = () => {
           </p>
           <div className="space-y-4">
             <div className="flex items-center justify-center gap-2">
-              <FaPhoneAlt className="text-green-700 text-xl" size={24}/>
+              <FaPhoneAlt className="text-green-700 text-xl" size={24} />
               <p className="text-gray-800">+91 82380 82910</p>
             </div>
             <div className="flex items-center justify-center gap-2">
-              <FaEnvelope className="text-green-700 text-xl" size={24}/>
+              <FaEnvelope className="text-green-700 text-xl" size={24} />
               <p className="text-gray-800">info@aroma-international.com</p>
             </div>
             <div className="flex items-center justify-center gap-2">

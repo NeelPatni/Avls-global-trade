@@ -1,4 +1,4 @@
-import Logo from "./logo.png";
+import Logo from "./logo.jpg";
 import About_Image from "./About_Image.jpg";
 import Contact_Img from "./Contact_Img.jpg";
 import slider_01 from "./slider_01.webp";

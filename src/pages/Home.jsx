@@ -6,6 +6,7 @@ import {
   FaAward,
   FaPhoneAlt,
   FaEnvelope,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { assets } from "../assets/assets.js";
 import Testimonials from "../components/Testimonials.jsx";
@@ -86,12 +87,23 @@ const Home = () => {
                 <p className="text-sm text-gray-600 my-2">
                   {product.description.trim().split(".")[0] + "."}
                 </p>
-                <Link
-                  to={`/product-detail/${product.id}`}
-                  className="bg-[#184b44] text-white font-medium py-2 px-4 rounded hover:bg-[#0f312d] transition-colors duration-300"
-                >
-                  Read More
-                </Link>
+                <div className="flex items-center justify-center gap-3">
+                  <Link
+                    to={`/product-detail/${product.id}`}
+                    className="bg-[#184b44] text-white font-medium py-2 px-4 rounded hover:bg-[#0f312d] transition-colors duration-300"
+                  >
+                    Read More
+                  </Link>
+                  <Link
+                    to={`/https://api.whatsapp.com/send?phone=918238082910&text=I want to buy this ${product.id}`}
+                    className="flex gap-2 bg-[#41a752] text-white font-medium py-2 px-4 rounded hover:bg-[#32b347] transition-colors duration-300"
+                  >
+                    <FaWhatsapp
+                      className="text-xl hover:cursor-pointer"
+                      size={24}
+                    />{" "}Order
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
@@ -135,9 +147,11 @@ const Home = () => {
           ].map((benefit, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center"
+              className="flex flex-col items-center text-center p-4 border border-gray-200 shadow-lg rounded-lg"
             >
-              <div className="mb-4">{benefit.icon}</div>
+              <div className="mb-4 flex justify-center items-center">
+                {benefit.icon}
+              </div>
               <h4 className="text-lg font-bold text-gray-700">
                 {benefit.title}
               </h4>

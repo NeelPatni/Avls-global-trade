@@ -4,6 +4,7 @@ import { FaPhoneVolume } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { FaFileDownload } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { assets } from "../assets/assets";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,13 +58,25 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <div className="flex justify-between items-center px-4 md:px-12 py-2 bg-[#184b44]">
+      <div className="flex justify-between items-center px-4 md:px-12 py-2 bg-[#124934]">
         {/* Logo */}
-        <div className="flex items-center space-x-4">
+        {/* <div className="flex items-center space-x-4">
           <div>
             <Link to="/">
               <h1 className="text-3xl font-bold text-white">AROMA</h1>
               <p className="text-white">International</p>
+            </Link>
+          </div>
+        </div> */}
+
+        <div className="flex items-center space-x-4">
+          <div>
+            <Link to="/">
+              <img
+                src={assets.Logo}
+                alt="AROMA International Logo"
+                className="h-28 w-auto" // Adjust height and width as needed
+              />
             </Link>
           </div>
         </div>
