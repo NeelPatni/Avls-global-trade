@@ -1,6 +1,8 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { products } from "../assets/assets.js";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -16,13 +18,26 @@ const ProductDetail = () => {
   return (
     <div className="max-w-screen-lg mx-auto p-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Left side: Product Image */}
+        {/* Left side: Product Image Carousel */}
         <div className="flex items-center justify-center">
-          <img
-            src={product.img}
-            alt={product.name}
-            className="object-cover w-full h-96"
-          />
+          <Carousel
+            showThumbs={false}
+            swipeable={false}
+            autoPlay
+            infiniteLoop
+            showStatus={false}
+            interval={3000}
+          >
+            {product.img.map((image, index) => (
+              <div key={index}>
+                <img
+                  src={image}
+                  alt={`Product Slide ${index + 1}`}
+                  className="object-cover w-full h-96"
+                />
+              </div>
+            ))}
+          </Carousel>
         </div>
 
         {/* Right side: Product Title and Description */}
@@ -97,12 +112,26 @@ const ProductDetail = () => {
               key={refProduct.id}
               className="border border-gray-300 rounded-lg p-4 hover:shadow-lg transition"
             >
-              <img
-                src={refProduct.img}
-                alt={refProduct.name}
-                className="object-cover w-full h-48 rounded-lg mb-4"
-              />
-              <h4 className="text-xl font-semibold text-gray-800 mb-2">
+              {/* Carousel for Reference Product */}
+              <Carousel
+                showThumbs={false}
+                autoPlay
+                infiniteLoop
+                showStatus={false}
+                interval={3000}
+              >
+                {refProduct.img.map((image, index) => (
+                  <div key={index}>
+                    <img
+                      src={image}
+                      alt={`Reference Product Slide ${index + 1}`}
+                      className="object-cover w-full h-64 rounded-lg"
+                    />
+                  </div>
+                ))}
+              </Carousel>
+
+              <h4 className="text-xl font-semibold text-gray-800 mt-4 mb-2">
                 {refProduct.name}
               </h4>
               <p className="text-gray-600 mb-4 text-justify">

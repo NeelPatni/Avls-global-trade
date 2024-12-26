@@ -75,9 +75,9 @@ const Home = () => {
               className="bg-white shadow-md rounded-md overflow-hidden border border-gray-200 p-4 min-h-[400px]" // Set a minimum height
             >
               <img
-                src={product.img}
+                src={product.img[1]}
                 alt={product.name}
-                className="object-cover h-56 w-full hover:scale-105 transition-transform duration-300 cursor-pointer" // Increased image height
+                className="object-cover h-96 w-full hover:scale-105 transition-transform duration-300 cursor-pointer" // Increased image height
               />
               <div className="flex flex-col items-center justify-center p-4 text-center">
                 <h4 className="text-lg font-semibold text-gray-800">
