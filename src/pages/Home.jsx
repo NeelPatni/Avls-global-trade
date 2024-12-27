@@ -27,13 +27,7 @@ const Home = () => {
 
       {/* Welcome Section */}
       <section className="text-center py-12 px-4 md:px-16 bg-white">
-        <div className="flex gap-1 items-center justify-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-green-700">
-            AROMA International
-          </h2>
-          <div className="bg-green-700 w-16 md:w-20 h-1 rounded-full"></div>
-        </div>
-        <div className="flex flex-col md:flex-row items-center justify-center mt-10">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8">
           {/* Image Section */}
           <div className="w-full md:w-1/2 md:py-4 flex justify-center">
             <img
@@ -43,7 +37,15 @@ const Home = () => {
             />
           </div>
           {/* Text Section */}
-          <div className="w-full md:w-1/2 text-justify mt-8 md:mt-0 md:pl-4">
+          <div className="w-full md:w-1/2 text-justify md:pl-4">
+            {/* Title Section */}
+            <div className="flex gap-1 items-center justify-start mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-green-700">
+                AROMA International
+              </h2>
+              <div className="bg-green-700 w-16 md:w-20 h-1 rounded-full"></div>
+            </div>
+            {/* Text Content */}
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
               AROMA International is an export-focused company based in Padra,
               Vadodara, motivated by government initiatives and goals for
@@ -94,15 +96,18 @@ const Home = () => {
                   >
                     Read More
                   </Link>
-                  <Link
-                    to={`/https://api.whatsapp.com/send?phone=918238082910&text=I want to buy this ${product.id}`}
+                  <a
+                    href={`https://api.whatsapp.com/send?phone=918238082910&text=I want to buy this ${product.id}`}
                     className="flex gap-2 bg-[#41a752] text-white font-medium py-2 px-4 rounded hover:bg-[#32b347] transition-colors duration-300"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <FaWhatsapp
                       className="text-xl hover:cursor-pointer"
                       size={24}
-                    />{" "}Order
-                  </Link>
+                    />
+                    Order
+                  </a>
                 </div>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { products } from "../assets/assets.js";
 import { Link } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 
 const ProductCard = () => {
   return (
@@ -19,13 +20,29 @@ const ProductCard = () => {
             <h4 className="text-lg font-semibold text-gray-800">
               {product.name}
             </h4>
-            <p className="text-sm text-gray-600 my-2">{product.description.trim().split('.')[0] + '.'}</p>
-            <Link
-              to={`/product-detail/${product.id}`}
-              className="bg-[#184b44] text-white font-medium py-2 px-4 rounded hover:bg-[#0f312d] transition-colors duration-300"
-            >
-              Read More
-            </Link>
+            <p className="text-sm text-gray-600 my-2">
+              {product.description.trim().split(".")[0] + "."}
+            </p>
+            <div className="flex items-center justify-center gap-3">
+              <Link
+                to={`/product-detail/${product.id}`}
+                className="bg-[#184b44] text-white font-medium py-2 px-4 rounded hover:bg-[#0f312d] transition-colors duration-300"
+              >
+                Read More
+              </Link>
+              <a
+                href={`https://api.whatsapp.com/send?phone=918238082910&text=I want to buy this ${product.id}`}
+                className="flex gap-2 bg-[#41a752] text-white font-medium py-2 px-4 rounded hover:bg-[#32b347] transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp
+                  className="text-xl hover:cursor-pointer"
+                  size={24}
+                />
+                Order
+              </a>
+            </div>
           </div>
         </div>
       ))}
