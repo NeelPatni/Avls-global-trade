@@ -123,13 +123,10 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom Section */}
-        <div className="mt-8 text-center text-sm">
+        <div className="flex items-center justify-center gap-2 mt-8 text-center text-sm">
           <p>
-            All Rights Reserved.{" "}
-            <span className="font-bold">Aroma International</span>
-          </p>
-          <p>
-            Managed By{" "}
+            All Rights Reserved{" "}
+            <span className="font-bold">Aroma International{" "}</span>Managed By{" "}
             <a
               href="https://www.taniyawebfix.com/"
               target="_blank"

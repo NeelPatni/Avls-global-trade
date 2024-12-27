@@ -92,7 +92,7 @@ const Home = () => {
                 <div className="flex items-center justify-center gap-3">
                   <Link
                     to={`/product-detail/${product.id}`}
-                    className="bg-[#184b44] text-white font-medium py-2 px-4 rounded hover:bg-[#0f312d] transition-colors duration-300"
+                    className="bg-[#184b44] text-white font-medium py-2 px-4 rounded hover:bg-[#0f312d] transition-colors duration-300 text-nowrap"
                   >
                     Read More
                   </Link>
@@ -170,17 +170,19 @@ const Home = () => {
 
       {/* Certifications Section */}
       <section className="py-12 px-4 md:px-16">
-        <div className="flex flex-col md:flex-row items-center max-w-screen-lg mx-auto">
+        <div className="flex flex-col md:flex-row items-center max-w-screen-lg mx-auto space-y-6 md:space-y-0">
           {/* Left Side: Text Section */}
-          <div className="md:w-1/3 flex flex-col justify-center items-center text-center md:text-left mb-4">
+          <div className="md:w-1/3 flex flex-col justify-center items-center text-center md:text-left">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
               Our Certifications
             </h3>
-            <p className="text-gray-500">We are FSSAI & ISO certified.</p>
+            <p className="text-gray-500 text-base md:text-lg">
+              We are FSSAI & ISO certified.
+            </p>
           </div>
 
           {/* Right Side: Carousel Section */}
-          <div className="md:w-2/3">
+          <div className="md:w-2/3 w-full">
             <Carousel
               showThumbs={false}
               showStatus={false}
@@ -188,19 +190,22 @@ const Home = () => {
               autoPlay
               interval={3000}
               centerMode
-              centerSlidePercentage={60}
+              centerSlidePercentage={90} // Larger percentage for smaller devices
               className="rounded-lg"
             >
               {certificates.map((cert, index) => (
-                <div key={index} className="flex flex-col items-center">
-                  <div className="border-2 border-gray-300 rounded-lg p-4 shadow-lg bg-white">
+                <div
+                  key={index}
+                  className="flex flex-col items-center px-2 sm:px-4" // Adjusted padding for small devices
+                >
+                  <div className="border-2 border-gray-300 rounded-lg p-4 shadow-lg bg-white max-w-xs sm:max-w-sm w-full">
                     <img
                       src={cert.image}
                       alt={cert.title}
-                      className="h-64 object-contain w-full"
+                      className="h-40 sm:h-48 md:h-64 object-contain w-full"
                     />
                   </div>
-                  <p className="mt-4 text-center text-gray-700 font-medium">
+                  <p className="mt-4 text-center text-gray-700 font-medium text-sm md:text-base">
                     {cert.title}
                   </p>
                 </div>

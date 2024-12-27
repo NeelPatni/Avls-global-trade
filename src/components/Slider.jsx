@@ -10,17 +10,17 @@ const Slider = () => {
       infiniteLoop
       showThumbs={false}
       showArrows
-      swipeable={false}
+      swipeable
       showStatus={false}
       interval={5000}
       className="relative"
     >
       {sliderImages.map((src, index) => (
-        <div key={index} className="h-[60vh] md:h-[70vh] lg:h-[80vh]">
+        <div key={index} className="h-[60vh] sm:h-[70vh] lg:h-[80vh]">
           <img
             src={src}
             alt={`Slide ${index + 1}`}
-            className="w-full h-full object-cover max-h-[80vh]"
+            className="w-full h-full object-cover"
           />
         </div>
       ))}
