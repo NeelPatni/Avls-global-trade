@@ -97,15 +97,25 @@ const Footer = () => {
               GF-8, Akshar Plaza, Govindpura Jakatnaka, Padra Vadodara, India -
               391440
             </p>
-            <p className="mb-2 flex items-center hover:cursor-pointer">
-              <FaPhoneAlt className="mr-2 text-green-500" size={24} />
-              +91 82380 82910
-            </p>
-            <p className="mb-2 flex items-center hover:cursor-pointer">
-              <MdOutlineMail className="mr-2 text-blue-500" size={24} />
-              info@aroma-international.com
-            </p>
+            <p>
+              {/* Phone Number */}
+              <a
+                href="tel:+918238082910"
+                className="mb-2 flex items-center hover:cursor-pointer"
+              >
+                <FaPhoneAlt className="mr-2 text-green-500" size={24} />
+                +91 82380 82910
+              </a>
 
+              {/* Email */}
+              <a
+                href="mailto:info@aroma-international.com"
+                className="mb-2 flex items-center hover:cursor-pointer"
+              >
+                <MdOutlineMail className="mr-2 text-blue-500" size={24} />
+                info@aroma-international.com
+              </a>
+            </p>
             {/* Social Media Links */}
             <div className="flex mt-4">
               <span className="font-bold">Follow Us:</span>
@@ -126,7 +136,7 @@ const Footer = () => {
         <div className="flex items-center justify-center gap-2 mt-8 text-center text-sm">
           <p>
             All Rights Reserved{" "}
-            <span className="font-bold">Aroma International{" "}</span>Managed By{" "}
+            <span className="font-bold">Aroma International </span>Managed By{" "}
             <a
               href="https://www.taniyawebfix.com/"
               target="_blank"

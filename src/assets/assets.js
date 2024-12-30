@@ -1,4 +1,4 @@
-import Logo from "./logo.jpg";
+import Logo from "./logo.png";
 import About_Image from "./About_Image.jpg";
 import Contact_Img from "./Contact_Img.jpg";
 import slider_01 from "./slider_01.jpg";
@@ -8,8 +8,12 @@ import slider_04 from "./slider_04.jpg";
 import slider_05 from "./slider_05.jpg";
 import slider_06 from "./slider_06.jpg";
 import slider_07 from "./slider_07.jpg";
-
 import small_slider_01 from "./small_slider_01.jpg";
+import small_slider_02 from "./small_slider_02.jpg";
+import small_slider_03 from "./small_slider_03.jpg";
+import small_slider_04 from "./small_slider_04.jpg";
+import small_slider_05 from "./small_slider_05.jpg";
+import small_slider_06 from "./small_slider_06.jpg";
 
 import Cumin_Seeds from "./Cumin_Seeds.jpg";
 import Cumin_Seeds_02 from "./Cumin_Seeds_02.jpeg";
@@ -39,7 +43,7 @@ export const assets = {
   Contact_Img,
 };
 
-export const sliderImages = [
+export const largeSliderImages = [
   slider_01,
   slider_02,
   slider_03,
@@ -48,6 +52,7 @@ export const sliderImages = [
   slider_06,
   slider_07,
 ];
+export const smallSliderImages = [small_slider_01,small_slider_02,small_slider_03,small_slider_04,small_slider_05,small_slider_06];
 
 export const products = [
   {

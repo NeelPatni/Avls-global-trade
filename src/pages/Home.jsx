@@ -225,14 +225,23 @@ const Home = () => {
           Ready to Get Started?
         </h3>
         <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-          <div className="flex items-center space-x-4">
+          {/* Phone Number */}
+          <a
+            href="tel:+918238082910"
+            className="flex items-center space-x-4 hover:cursor-pointer"
+          >
             <FaPhoneAlt size={24} />
             <p className="text-lg">+91 82380 82910</p>
-          </div>
-          <div className="flex items-center space-x-4">
+          </a>
+
+          {/* Email Address */}
+          <a
+            href="mailto:info@aroma-international.com"
+            className="flex items-center space-x-4 hover:cursor-pointer"
+          >
             <FaEnvelope size={24} />
             <p className="text-lg">info@aroma-international.com</p>
-          </div>
+          </a>
         </div>
       </section>
     </main>

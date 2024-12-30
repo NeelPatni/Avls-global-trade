@@ -25,17 +25,27 @@ const Header = () => {
       <div className="bg-gray-700 text-white flex flex-col sm:flex-row flex-wrap justify-center sm:justify-around items-center p-3 text-sm space-y-2 sm:space-y-0">
         {/* Contact Information */}
         <div className="flex flex-col sm:flex-row items-center gap-4">
-          <div className="flex items-center gap-2">
-            <MdOutlineMail size={18} color="#4A90E2" />{" "}
+          {/* Email Address */}
+          <a
+            href="mailto:info@aroma-international.com"
+            className="flex items-center gap-2 hover:cursor-pointer"
+          >
+            <MdOutlineMail size={18} color="#4A90E2" />
             {/* Light Blue for email */}
             <span className="text-center sm:text-left">
-              info@aroma-international.com{" "}
+              info@aroma-international.com
             </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <FaPhoneVolume size={18} color="#34D399" /> {/* Green for phone */}
+          </a>
+
+          {/* Phone Number */}
+          <a
+            href="tel:+918238082910"
+            className="flex items-center gap-2 hover:cursor-pointer"
+          >
+            <FaPhoneVolume size={18} color="#34D399" />
+            {/* Green for phone */}
             <span>+91 82380 82910</span>
-          </div>
+          </a>
         </div>
 
         {/* GST Information */}
@@ -60,15 +70,6 @@ const Header = () => {
       {/* Main Header */}
       <div className="flex justify-between items-center px-4 md:px-12 py-2 bg-[#124934]">
         {/* Logo */}
-        {/* <div className="flex items-center space-x-4">
-          <div>
-            <Link to="/">
-              <h1 className="text-3xl font-bold text-white">AROMA</h1>
-              <p className="text-white">International</p>
-            </Link>
-          </div>
-        </div> */}
-
         <div className="flex items-center space-x-4">
           <div>
             <Link to="/">
