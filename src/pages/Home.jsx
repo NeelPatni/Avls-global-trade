@@ -199,9 +199,10 @@ const Home = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full"
+                  key={index}
                 >
                   <div
-                    key={index}
+                    
                     className="flex flex-col items-center px-2 sm:px-4" // Adjusted padding for small devices
                   >
                     <div className="border-2 border-gray-300 rounded-lg p-4 shadow-lg bg-white max-w-xs sm:max-w-sm w-full">
