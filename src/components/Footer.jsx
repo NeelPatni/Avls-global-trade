@@ -42,49 +42,49 @@ const Footer = () => {
             <h2 className="text-lg font-bold mb-4">Our Products</h2>
             <ul>
               <li className="mb-2">
-                <a
-                  href="/product-detail/cumin-seeds"
+                <Link
+                  to="/product-detail/cumin-seeds"
                   className="hover:underline"
                 >
                   Cumin
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a
-                  href="/product-detail/turmeric-powder"
+                <Link
+                  to="/product-detail/turmeric-powder"
                   className="hover:underline"
                 >
                   Turmeric
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a
-                  href="/product-detail/black-pepper"
+                <Link
+                  to="/product-detail/black-pepper"
                   className="hover:underline"
                 >
                   Black Pepper
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="/product-detail/cardamom" className="hover:underline">
+                <Link href="/product-dettocardamom" className="hover:underline">
                   Cardamom
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a
-                  href="/product-detail/red-chillies"
+                <Link
+                  to="/product-detail/red-chillies"
                   className="hover:underline"
                 >
                   Red Chillies
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a
-                  href="/product-detail/basmati-rice"
+                <Link
+                  to="/product-detail/basmati-rice"
                   className="hover:underline"
                 >
                   Basmati Rice
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
