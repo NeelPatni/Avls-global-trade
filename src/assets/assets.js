@@ -146,16 +146,19 @@ export const certificates = [
     title: "RCMC Certification",
     image: RCMC,
     description: "Certificate of Registration as Exporter with APEDA.",
+    link:RCMC
   },
   {
     title: "CE Certification",
     image: APEDA,
     description: "Compliance with European Union product safety standards.",
+    link:APEDA
   },
   {
     title: "FSSAI Certification",
     image: FSSAI,
     description:
       "Approval from the Food Safety and Standards Authority of India.",
+      link:FSSAI
   },
 ];

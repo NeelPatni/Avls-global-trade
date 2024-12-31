@@ -17,7 +17,7 @@ const Slider = () => {
       infiniteLoop
       showThumbs={false}
       showArrows
-      swipeable
+      swipeable={false}
       showStatus={false}
       interval={5000}
       className="relative"

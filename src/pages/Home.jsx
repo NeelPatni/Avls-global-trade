@@ -194,21 +194,28 @@ const Home = () => {
               className="rounded-lg"
             >
               {certificates.map((cert, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center px-2 sm:px-4" // Adjusted padding for small devices
+                <a
+                  href={cert.link} // Official link to the certificate
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
                 >
-                  <div className="border-2 border-gray-300 rounded-lg p-4 shadow-lg bg-white max-w-xs sm:max-w-sm w-full">
-                    <img
-                      src={cert.image}
-                      alt={cert.title}
-                      className="h-40 sm:h-48 md:h-64 object-contain w-full"
-                    />
+                  <div
+                    key={index}
+                    className="flex flex-col items-center px-2 sm:px-4" // Adjusted padding for small devices
+                  >
+                    <div className="border-2 border-gray-300 rounded-lg p-4 shadow-lg bg-white max-w-xs sm:max-w-sm w-full">
+                      <img
+                        src={cert.image}
+                        alt={cert.title}
+                        className="h-40 sm:h-48 md:h-64 object-contain w-full"
+                      />
+                    </div>
+                    <p className="mt-4 text-center text-gray-700 font-medium text-sm md:text-base">
+                      {cert.title}
+                    </p>
                   </div>
-                  <p className="mt-4 text-center text-gray-700 font-medium text-sm md:text-base">
-                    {cert.title}
-                  </p>
-                </div>
+                </a>
               ))}
             </Carousel>
           </div>
