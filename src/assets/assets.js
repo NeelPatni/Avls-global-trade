@@ -16,8 +16,7 @@ import small_slider_05 from "./small_slider_05.jpg";
 import small_slider_06 from "./small_slider_06.jpg";
 
 import Cumin_Seeds from "./Cumin_Seeds.jpg";
-import Cumin_Seeds_02 from "./Cumin_Seeds_02.jpeg";
-import Cumin_Seeds_03 from "./Cumin_Seeds_03.jpeg";
+import Cumin_Seeds_01 from "./Cumin_Seeds_01.jpeg";
 import Turmeric_Powder from "./Turmeric_Powder.jpg";
 import Turmeric_Powder_02 from "./Turmeric_Powder_02.jpeg";
 import Black_Pepper from "./Black_Pepper.jpg";
@@ -52,13 +51,20 @@ export const largeSliderImages = [
   slider_06,
   slider_07,
 ];
-export const smallSliderImages = [small_slider_01,small_slider_02,small_slider_03,small_slider_04,small_slider_05,small_slider_06];
+export const smallSliderImages = [
+  small_slider_01,
+  small_slider_02,
+  small_slider_03,
+  small_slider_04,
+  small_slider_05,
+  small_slider_06,
+];
 
 export const products = [
   {
     id: "cumin-seeds",
     name: "Cumin Seeds (Cuminum cyminum)",
-    img: [Cumin_Seeds, Cumin_Seeds_02, Cumin_Seeds_03],
+    img: [Cumin_Seeds, Cumin_Seeds_01],
     use: "Cooking",
     selfLife: "12 to 24 months",
     color: "Brown",
@@ -146,19 +152,19 @@ export const certificates = [
     title: "RCMC Certification",
     image: RCMC,
     description: "Certificate of Registration as Exporter with APEDA.",
-    link:RCMC
+    link: RCMC,
   },
   {
     title: "CE Certification",
     image: APEDA,
     description: "Compliance with European Union product safety standards.",
-    link:APEDA
+    link: APEDA,
   },
   {
     title: "FSSAI Certification",
     image: FSSAI,
     description:
       "Approval from the Food Safety and Standards Authority of India.",
-      link:FSSAI
+    link: FSSAI,
   },
 ];
