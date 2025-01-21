@@ -173,12 +173,12 @@ const Home = () => {
         <div className="flex flex-col md:flex-row items-center max-w-screen-lg mx-auto space-y-6 md:space-y-0">
           {/* Left Side: Text Section */}
           <div className="md:w-1/3 flex flex-col justify-center items-center text-center md:text-left">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
-              Our Certifications
-            </h3>
-            <p className="text-gray-500 text-base md:text-lg">
-              We are FSSAI & ISO certified.
-            </p>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
+                Our Certifications
+              </h3>
+              <p className="text-gray-500 text-base md:text-lg">
+                We are APEDA, Spice Board and FASSAI certified.
+              </p>
           </div>
 
           {/* Right Side: Carousel Section */}
@@ -202,7 +202,6 @@ const Home = () => {
                   key={index}
                 >
                   <div
-                    
                     className="flex flex-col items-center px-2 sm:px-4" // Adjusted padding for small devices
                   >
                     <div className="border-2 border-gray-300 rounded-lg p-4 shadow-lg bg-white max-w-xs sm:max-w-sm w-full">
