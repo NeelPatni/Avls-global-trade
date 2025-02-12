@@ -1,6 +1,74 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 
 const FAQSection = () => {
+  const form = useRef();
+  const navigate = useNavigate();
+  const [errors, setErrors] = useState({});
+  const [formData, setFormData] = useState({
+    from_name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const validateForm = () => {
+    let formErrors = {};
+    const formElements = form.current.elements;
+
+    if (!formElements["from_name"].value.trim()) {
+      formErrors.name = "Name is required";
+    }
+    if (!formElements["email"].value.trim()) {
+      formErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formElements["email"].value)) {
+      formErrors.email = "Email is invalid";
+    }
+    if (!formElements["phone"].value.trim()) {
+      formErrors.phone = "Phone number is required";
+    } else if (!/^[\d\s()+-]+$/.test(formElements["phone"].value)) {
+      formErrors.phone = "Phone number is invalid";
+    }
+    if (!formElements["message"].value.trim()) {
+      formErrors.message = "Message is required";
+    }
+
+    setErrors(formErrors);
+    return Object.keys(formErrors).length === 0;
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
+    emailjs
+      .sendForm("service_vq3gst3", "template_ofeuxtk", form.current, {
+        publicKey: "0PQJ5hxx95qBf9xRu",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          form.current.reset(); // Clear the form
+          // alert("Done");
+          navigate("/thankyou");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   const faqs = [
     {
       question: "What types of products do you export?",
@@ -66,27 +134,59 @@ const FAQSection = () => {
         <div className="bg-[#184b44] p-6 rounded-md text-white w-full max-w-sm md:max-w-md">
           <h2 className="text-2xl font-bold mb-4">Export Inquiry</h2>
           <p className="mb-6">Get in touch with us for the best deals on premium Indian-origin products.</p>
-          <form className="space-y-4">
-            <input
-              type="text"
-              placeholder="Enter your name"
-              className="w-full p-2 rounded-md text-black"
-            />
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full p-2 rounded-md text-black"
-            />
-            <input
-              type="tel"
-              placeholder="Enter your phone"
-              className="w-full p-2 rounded-md text-black"
-            />
-            <textarea
-              placeholder="Enter your message"
-              className="w-full p-2 rounded-md text-black"
-              rows={4}
-            ></textarea>
+          <form className="space-y-4" ref={form} onSubmit={sendEmail}>
+            <div className="relative">
+              <input
+                type="text"
+                name="from_name"
+                placeholder="Enter your name"
+                className="w-full p-2 rounded-md text-black"
+                value={formData.from_name}
+                onChange={handleChange}
+              />
+              {errors.name && (
+                <p className="text-red-500 text-xs absolute bottom-0 left-0">{errors.name}</p>
+              )}
+            </div>
+            <div className="relative">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                className="w-full p-2 rounded-md text-black"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              {errors.email && (
+                <p className="text-red-500 text-xs absolute bottom-0 left-0">{errors.email}</p>
+              )}
+            </div>
+            <div className="relative">
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Enter your phone"
+                className="w-full p-2 rounded-md text-black"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+              {errors.phone && (
+                <p className="text-red-500 text-xs absolute bottom-0 left-0">{errors.phone}</p>
+              )}
+            </div>
+            <div className="relative">
+              <textarea
+                name="message"
+                placeholder="Enter your message"
+                className="w-full p-2 rounded-md text-black"
+                rows={4}
+                value={formData.message}
+                onChange={handleChange}
+              />
+              {errors.message && (
+                <p className="text-red-500 text-xs absolute bottom-0 left-0">{errors.message}</p>
+              )}
+            </div>
             <button
               type="submit"
               className="bg-[#41a752] text-white w-full py-2 rounded-md font-bold hover:bg-[#41a752]"

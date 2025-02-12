@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import FloatingContact from "./components/FloatingContact";
 import Certifications from "./pages/Certifications";
 import ProductDetail from "./pages/ProductDetail";
+import ThankYou from "./pages/ThankYou";
 
 const App = () => {
   return (
@@ -20,11 +21,14 @@ const App = () => {
         <Route path="/products" element={<Products />} />
         <Route path="/product-detail/:id" element={<ProductDetail />} />
         <Route path="/certifications" element={<Certifications />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="/thankyou" element={<ThankYou/>}/>
       </Routes>
       <Footer />
       <FloatingContact />
     </Router>
+    
+    
   );
 };
 

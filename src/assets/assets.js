@@ -1,6 +1,7 @@
 import Logo from "./logo.png";
 import About_Image from "./About_Image.jpg";
 import Contact_Img from "./Contact_Img.jpg";
+import ThankYou from "./ThankYou.jpg";
 
 import slider_01 from "./slider_01.jpg";
 import slider_02 from "./slider_02.jpg";
@@ -55,6 +56,7 @@ export const assets = {
   Logo,
   About_Image,
   Contact_Img,
+  ThankYou,
 };
 
 export const largeSliderImages = [
