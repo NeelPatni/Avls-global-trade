@@ -7,7 +7,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: "John Smith",
-      text: "Aroma International has been our trusted partner for years. Their products are always fresh and top quality.",
+      text: "AVLS Global Trade has been our trusted partner for years. Their products are always fresh and top quality.",
       rating: 5,
     },
     {
@@ -22,7 +22,7 @@ const Testimonials = () => {
     },
     {
       name: "Sita Kumari",
-      text: "Aroma International has the best quality grains I've ever worked with. Their customer service is fantastic.",
+      text: "AVLS Global Trade has the best quality grains I've ever worked with. Their customer service is fantastic.",
       rating: 4,
     },
     {
@@ -54,7 +54,7 @@ const Testimonials = () => {
 
   return (
     <section className="py-12 px-4 md:px-16 bg-gray-100">
-      <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
+      <h3 className="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-8">
         What Our Clients Say
       </h3>
       <Carousel

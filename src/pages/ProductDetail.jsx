@@ -42,7 +42,7 @@ const ProductDetail = () => {
 
         {/* Right side: Product Title and Description */}
         <div>
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+          <h2 className="text-2xl font-semibold text-blue-800 mb-4">
             {product.name}
           </h2>
           <p className="text-md text-gray-600 mb-6 text-justify">
@@ -55,7 +55,7 @@ const ProductDetail = () => {
       <div className="mt-8">
         <table className="min-w-full table-auto border-collapse border border-gray-300 rounded-lg overflow-hidden">
           <thead>
-            <tr className="bg-[#184b44] text-white">
+            <tr className="bg-blue-900 text-white">
               <th className="px-4 py-2 text-left font-semibold">Attribute</th>
               <th className="px-4 py-2 text-left font-semibold">Details</th>
             </tr>
@@ -103,7 +103,7 @@ const ProductDetail = () => {
 
       {/* Below: Reference Products */}
       <div className="mt-12">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+        <h3 className="text-2xl font-semibold text-blue-900 mb-6">
           You Might Also Like
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -131,7 +131,7 @@ const ProductDetail = () => {
                 ))}
               </Carousel>
 
-              <h4 className="text-xl font-semibold text-gray-800 mt-4 mb-2">
+              <h4 className="text-xl font-semibold text-blue-900 mt-4 mb-2">
                 {refProduct.name}
               </h4>
               <p className="text-gray-600 mb-4 text-justify">
@@ -139,7 +139,7 @@ const ProductDetail = () => {
               </p>
               <Link
                 to={`/product-detail/${refProduct.id}`}
-                className="text-[#184b44] font-semibold hover:underline"
+                className="text-blue-900 font-semibold hover:underline"
               >
                 View Details
               </Link>

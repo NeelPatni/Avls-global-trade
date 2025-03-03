@@ -61,14 +61,14 @@ const ContactUs = () => {
   };
 
   return (
-    <main className="relative bg-gradient-to-br from-green-200 to-green-500 min-h-screen p-6 flex items-center justify-center">
+    <main className="relative bg-gradient-to-br from-green-200 to-blue-500 min-h-screen p-6 flex items-center justify-center">
       <div className="absolute inset-0 bg-black bg-opacity-70 -z-10"></div>
 
       <div className="w-full max-w-6xl bg-white bg-opacity-90 rounded-lg shadow-2xl p-6 md:p-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Contact Form */}
         <div className="flex flex-col justify-between">
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
               Get in Touch
             </h1>
             <p className="text-gray-700 mb-8">
@@ -128,7 +128,7 @@ const ContactUs = () => {
                 <textarea
                   id="message"
                   name="message"
-                  className="w-full border-gray-300 rounded-lg p-3 shadow-sm focus:ring-green-500 focus:border-green-500"
+                  className="w-full border-gray-300 rounded-lg p-3 shadow-sm focus:ring-blue-500 focus:border-blue-500"
                   placeholder="Write your message"
                   autoComplete="off"
                   rows="5"
@@ -138,7 +138,7 @@ const ContactUs = () => {
 
               <input
                 type="submit"
-                className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold px-4 py-2 rounded-lg shadow-lg hover:from-green-600 hover:to-green-700 transition-transform transform hover:-translate-y-1" value="SEND INQUIRY"
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-4 py-2 rounded-lg shadow-lg hover:from-blue-600 hover:to-blue-700 transition-transform transform hover:-translate-y-1" value="SEND INQUIRY"
               />
                 
               
@@ -148,7 +148,7 @@ const ContactUs = () => {
 
         {/* Contact Details */}
         <div className="flex flex-col justify-center text-center bg-green-50 p-8 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold text-green-800 mb-4">
+          <h2 className="text-2xl font-semibold text-blue-900 mb-4">
             Contact Information
           </h2>
           <p className="text-gray-800 mb-8">
@@ -156,17 +156,17 @@ const ContactUs = () => {
           </p>
           <div className="space-y-4">
             <div className="flex items-center justify-center gap-2">
-              <FaPhoneAlt className="text-green-700 text-xl" size={24} />
-              <p className="text-gray-800">+91 82380 82910</p>
+              <FaPhoneAlt className="text-blue-700 text-xl" size={24} />
+              <p className="text-gray-800">+91 82003 49770</p>
             </div>
             <div className="flex items-center justify-center gap-2">
-              <FaEnvelope className="text-green-700 text-xl" size={24} />
-              <p className="text-gray-800">info@aroma-international.com</p>
+              <FaEnvelope className="text-blue-700 text-xl" size={24} />
+              <p className="text-gray-800">info@avlsglobaltrade.com</p>
             </div>
             <div className="flex items-center justify-center gap-2">
-              <FaMapMarkerAlt className="text-green-700 text-xl" size={24} />
+              <FaMapMarkerAlt className="text-blue-700 text-xl" size={24} />
               <p className="text-gray-800 text-wrap">
-                GF-8, Akshar Plaza, Govindpura Jakatnaka, Padra Vadodara, India - 391440
+              Address:B-33, Rameshwari Society, Near Vinay Society, Ajwa Road, Vadodara-390019.
               </p>
             </div>
           </div>

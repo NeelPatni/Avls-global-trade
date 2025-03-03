@@ -24,14 +24,14 @@ const About = () => {
           <div className="w-full md:w-1/2 text-justify md:pl-4">
             {/* Title Section */}
             <div className="flex gap-1 items-center justify-start mb-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-green-700">
-                AROMA International
+              <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+                AVLS Global Trade
               </h2>
-              <div className="bg-green-700 w-16 md:w-20 h-1 rounded-full"></div>
+              <div className="bg-blue-900 w-16 md:w-20 h-1 rounded-full"></div>
             </div>
             {/* Text Content */}
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-              AROMA International is an export-focused company based in Padra,
+              AVLS Global Trade is an export-focused company based in Padra,
               Vadodara, motivated by government initiatives and goals for
               imports and exports. With our global business partners, we trade
               in the export of premium quality Indian-origin "Spices," and
@@ -53,10 +53,10 @@ const About = () => {
       {/* Mission & Vision Section */}
       <section className="bg-gray-100 py-12">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-green-700">
+          <h2 className="text-3xl font-bold text-blue-900">
             Our Mission & Vision
           </h2>
-          <div className="bg-green-700 w-16 h-1 rounded-full mx-auto my-4"></div>
+          <div className="bg-red-700 w-16 h-1 rounded-full mx-auto my-4"></div>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">
             Our mission is to be a global leader in the export of
             premium-quality agricultural products, offering the freshest and
@@ -73,14 +73,14 @@ const About = () => {
 
       {/* Core Values Section */}
       <section className="py-12 px-4 md:px-16">
-        <h2 className="text-3xl font-bold text-center text-green-700">
+        <h2 className="text-3xl font-bold text-center text-blue-900">
           Our Core Values
         </h2>
-        <div className="bg-green-700 w-16 h-1 rounded-full mx-auto my-4"></div>
+        <div className="bg-red-700 w-16 h-1 rounded-full mx-auto my-4"></div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mt-8">
           <div>
-            <FaRegStar className="text-green-700 text-3xl mx-auto" />
-            <h3 className="text-xl font-semibold text-green-700 mt-4">
+            <FaRegStar className="text-red-700 text-3xl mx-auto" />
+            <h3 className="text-xl font-semibold text-blue-900 mt-4">
               Integrity
             </h3>
             <p className="text-gray-600">
@@ -88,8 +88,8 @@ const About = () => {
             </p>
           </div>
           <div>
-            <FaRegHandPointRight className="text-green-700 text-3xl mx-auto" />
-            <h3 className="text-xl font-semibold text-green-700 mt-4">
+            <FaRegHandPointRight className="text-red-700 text-3xl mx-auto" />
+            <h3 className="text-xl font-semibold text-blue-900 mt-4">
               Quality
             </h3>
             <p className="text-gray-600">
@@ -97,8 +97,8 @@ const About = () => {
             </p>
           </div>
           <div>
-            <FaShieldAlt className="text-green-700 text-3xl mx-auto" />
-            <h3 className="text-xl font-semibold text-green-700 mt-4">
+            <FaShieldAlt className="text-red-700 text-3xl mx-auto" />
+            <h3 className="text-xl font-semibold text-blue-900 mt-4">
               Sustainability
             </h3>
             <p className="text-gray-600">
@@ -112,46 +112,16 @@ const About = () => {
       {/* Testimonials Section */}
       <Testimonials />
 
-      {/* Certifications Section */}
-      <section className="py-12 px-4 md:px-16">
-        <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
-          Our Certifications
-        </h3>
-        <div className="max-w-screen-lg mx-auto">
-          <Carousel
-            showThumbs={false}
-            showStatus={false}
-            infiniteLoop
-            autoPlay
-            interval={3000}
-            showIndicators={false}
-            centerMode
-            className="rounded-lg"
-            centerSlidePercentage={100} // Default for small devices
-            renderIndicator={false}
-          >
-            {certificates.map((cert, index) => (
-              <div key={index} className="flex justify-center items-center">
-                <img
-                  src={cert.image}
-                  alt={cert.title}
-                  className="h-64 object-contain w-full"
-                />
-              </div>
-            ))}
-          </Carousel>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section className="py-12 px-4 md:px-16 bg-white">
-        <h2 className="text-3xl font-bold text-center text-green-700">
+        <h2 className="text-3xl font-bold text-center text-blue-900">
           Frequently Asked Questions
         </h2>
-        <div className="bg-green-700 w-16 h-1 rounded-full mx-auto my-4"></div>
+        <div className="bg-red-700 w-16 h-1 rounded-full mx-auto my-4"></div>
         <div className="space-y-6 mt-8">
           <div>
-            <h3 className="text-xl font-semibold text-green-700">
+            <h3 className="text-xl font-semibold text-blue-900">
               What products do you export?
             </h3>
             <p className="text-gray-600">
@@ -160,7 +130,7 @@ const About = () => {
             </p>
           </div>
           <div>
-            <h3 className="text-xl font-semibold text-green-700">
+            <h3 className="text-xl font-semibold text-blue-900">
               Where are your products sourced from?
             </h3>
             <p className="text-gray-600">

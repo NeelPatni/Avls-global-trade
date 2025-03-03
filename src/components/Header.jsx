@@ -27,35 +27,35 @@ const Header = () => {
         <div className="flex flex-col sm:flex-row items-center gap-4">
           {/* Email Address */}
           <a
-            href="mailto:info@aroma-international.com"
+            href="mailto:info@avlsglobaltrade.com"
             className="flex items-center gap-2 hover:cursor-pointer"
           >
             <MdOutlineMail size={18} color="#4A90E2" />
             {/* Light Blue for email */}
             <span className="text-center sm:text-left">
-              info@aroma-international.com
+              info@avlsglobaltrade.com
             </span>
           </a>
 
           {/* Phone Number */}
           <a
-            href="tel:+918238082910"
+            href="tel:+918200349770"
             className="flex items-center gap-2 hover:cursor-pointer"
           >
-            <FaPhoneVolume size={18} color="#34D399" />
+            <FaPhoneVolume size={18} color="4A90E2" />
             {/* Green for phone */}
-            <span>+91 82380 82910</span>
+            <span>+91 82003 49770</span>
           </a>
         </div>
 
         {/* GST Information */}
         <div className="flex flex-col md:flex-row gap-6 text-center sm:text-left">
           <p>
-            GST No.<span className="font-semibold"> 24AHQPP9217M1ZM</span>
+            GST No.<span className="font-semibold"> 24ANIPD5711A1ZR</span>
           </p>
-          <h1 className="hidden md:flex items-center gap-2  hover:underline hover:text-yellow-400 cursor-pointer">
+          {/* <h1 className="hidden md:flex items-center gap-2  hover:underline hover:text-yellow-400 cursor-pointer">
             <FaFileDownload size={18} color="#1D4ED8" />{" "}
-            {/* Blue for download */}
+             Blue for download 
             <a
               href="../assets/Brochure.pdf"
               download="Brochure.pdf"
@@ -63,20 +63,20 @@ const Header = () => {
             >
               Download Brochure
             </a>
-          </h1>
+          </h1> */}
         </div>
       </div>
 
       {/* Main Header */}
-      <div className="flex justify-between items-center px-4 md:px-12 py-2 bg-[#124934]">
+      <div className="flex justify-between items-center px-4 md:px-12 py-2 bg-orange-200">
         {/* Logo */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 ">
           <div>
             <Link to="/">
               <img
                 src={assets.Logo}
-                alt="AROMA International Logo"
-                className="h-28 w-auto" // Adjust height and width as needed
+                alt="AVLS Global Trade Logo"
+                className="h-32 w-auto" // Adjust height and width as needed
               />
             </Link>
           </div>
@@ -84,7 +84,7 @@ const Header = () => {
 
         {/* Hamburger Menu Button */}
         <button
-          className="md:hidden text-white text-2xl"
+          className="md:hidden text-black text-2xl"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <FaTimes /> : <FaBars />}
@@ -92,15 +92,14 @@ const Header = () => {
 
         {/* Navigation Links */}
         <nav
-          className={`fixed top-0 right-0 h-full bg-[#184b44] text-white z-20 transition-transform duration-300 ease-in-out md:static md:flex md:space-x-6 md:h-auto md:bg-transparent md:translate-x-0 ${
-            isMenuOpen ? "translate-x-0 w-64" : "translate-x-full"
-          }`}
+          className={`fixed top-0 right-0 h-full bg-red-700 text-white z-20 transition-transform duration-300 ease-in-out md:static md:flex md:space-x-6 md:h-auto md:bg-transparent md:translate-x-0 ${isMenuOpen ? "translate-x-0 w-64" : "translate-x-full"
+            }`}
         >
           <ul className="flex flex-col items-center justify-center space-y-6 mt-20 md:flex-row md:space-y-0 md:mt-0">
             <li>
               <Link
                 to="/"
-                className="block px-4 py-2 md:inline-block font-semibold hover:text-yellow-400 rounded-lg"
+                className="block px-4 py-2 md:inline-block font-semibold text-white md:text-blue-900  rounded-lg"
                 onClick={closeMenu}
               >
                 Home
@@ -109,70 +108,23 @@ const Header = () => {
             <li>
               <Link
                 to="/about"
-                className="block px-4 py-2 md:inline-block font-semibold hover:text-yellow-400 rounded-lg"
+                className="block px-4 py-2 md:inline-block font-semibold text-white md:text-blue-900  rounded-lg"
                 onClick={closeMenu}
               >
                 About Us
               </Link>
             </li>
             <li
-              className="relative block px-4 py-2 md:inline-block font-semibold cursor-pointer hover:text-yellow-400 rounded-lg"
+              className="relative block px-4 py-2 md:inline-block font-semibold cursor-pointer text-white md:text-blue-900  rounded-lg"
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
               <Link to="/products">Products</Link>
-              {/* Dropdown Menu */}
-              {isDropdownOpen && (
-                <ul className="absolute left-0 mt-2 bg-white text-black shadow-md rounded-md font-medium text-nowrap">
-                  <li className="px-6 py-2 hover:bg-gray-200">
-                    <Link to="/product-detail/cumin-seeds" onClick={closeMenu}>
-                      Cumin
-                    </Link>
-                  </li>
-                  <li className="px-6 py-2 hover:bg-gray-200">
-                    <Link
-                      to="/product-detail/turmeric-powder"
-                      onClick={closeMenu}
-                    >
-                      Turmeric
-                    </Link>
-                  </li>
-                  <li className="px-6 py-2 hover:bg-gray-200">
-                    <Link to="/product-detail/black-pepper" onClick={closeMenu}>
-                      Black Pepper
-                    </Link>
-                  </li>
-                  <li className="px-6 py-2 hover:bg-gray-200">
-                    <Link to="/product-detail/cardamom" onClick={closeMenu}>
-                      Cardamom
-                    </Link>
-                  </li>
-                  <li className="px-6 py-2 hover:bg-gray-200">
-                    <Link to="/product-detail/red-chillies" onClick={closeMenu}>
-                      Red Chillies
-                    </Link>
-                  </li>
-                  <li className="px-6 py-2 hover:bg-gray-200">
-                    <Link to="/product-detail/basmati-rice" onClick={closeMenu}>
-                      Basmati Rice
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-            <li>
-              <Link
-                to="/certifications"
-                className="block px-4 py-2 md:inline-block font-semibold hover:text-yellow-400 rounded-lg"
-                onClick={closeMenu}
-              >
-                Certifications
-              </Link>
             </li>
             <li>
               <Link
                 to="/contact"
-                className="block px-4 py-2 md:inline-block font-semibold hover:text-yellow-400 rounded-lg"
+                className="block px-4 py-2 md:inline-block font-semibold text-white md:text-blue-900  rounded-lg "
                 onClick={closeMenu}
               >
                 Contact Us
@@ -180,6 +132,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+
       </div>
 
       {/* Overlay for Menu */}

@@ -26,13 +26,13 @@ const ProductCard = () => {
             <div className="flex items-center justify-center gap-3">
               <Link
                 to={`/product-detail/${product.id}`}
-                className="bg-[#184b44] text-white font-medium py-2 px-4 rounded hover:bg-[#0f312d] transition-colors duration-300"
+                className="bg-blue-900 text-white font-medium py-2 px-4 rounded hover:bg-red-700 transition-colors duration-300"
               >
                 Read More
               </Link>
               <a
-                href={`https://api.whatsapp.com/send?phone=918238082910&text=I want to buy this ${product.id}`}
-                className="flex gap-2 bg-[#41a752] text-white font-medium py-2 px-4 rounded hover:bg-[#32b347] transition-colors duration-300"
+                href={`https://api.whatsapp.com/send?phone=918200349770&text=I want to buy this ${product.id}`}
+                className="flex gap-2 bg-blue-900 text-white font-medium py-2 px-4 rounded hover:bg-blue-500 transition-colors duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >

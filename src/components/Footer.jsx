@@ -43,10 +43,10 @@ const Footer = () => {
             <ul>
               <li className="mb-2">
                 <Link
-                  to="/product-detail/cumin-seeds"
+                  to="/product-detail/jeera"
                   className="hover:underline"
                 >
-                  Cumin
+                  Jeera
                 </Link>
               </li>
               <li className="mb-2">
@@ -59,10 +59,10 @@ const Footer = () => {
               </li>
               <li className="mb-2">
                 <Link
-                  to="/product-detail/black-pepper"
+                  to="/product-detail/makhana"
                   className="hover:underline"
                 >
-                  Black Pepper
+                  Makhana
                 </Link>
               </li>
               <li className="mb-2">
@@ -71,19 +71,25 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mb-2">
+                <Link to="/product-detail/guar_gum" className="hover:underline">
+                  Guar Gum
+                </Link>
+              </li>
+
+              <li className="mb-2">
                 <Link
                   to="/product-detail/red-chillies"
                   className="hover:underline"
                 >
-                  Red Chillies
+                  Black Pepper
                 </Link>
               </li>
               <li className="mb-2">
                 <Link
-                  to="/product-detail/basmati-rice"
+                  to="/product-detail/rice"
                   className="hover:underline"
                 >
-                  Basmati Rice
+                  Rice
                 </Link>
               </li>
             </ul>
@@ -91,29 +97,28 @@ const Footer = () => {
 
           {/* Contact Details Section */}
           <div>
-            <h2 className="text-lg font-bold mb-4">Aroma International</h2>
+            <h2 className="text-lg font-bold mb-4">AVLS Global Trade</h2>
             <p className="mb-2 flex items-center hover:cursor-pointer">
               <MdLocationOn className="mr-2 text-orange-500" size={24} />
-              GF-8, Akshar Plaza, Govindpura Jakatnaka, Padra Vadodara, India -
-              391440
+              Address:B-33, Rameshwari Society, Near Vinay Society, Ajwa Road, Vadodara-390019.
             </p>
             <p>
               {/* Phone Number */}
               <a
-                href="tel:+918238082910"
+                href="tel:+918200349770"
                 className="mb-2 flex items-center hover:cursor-pointer"
               >
-                <FaPhoneAlt className="mr-2 text-green-500" size={24} />
-                +91 82380 82910
+                <FaPhoneAlt className="mr-2 text-blue-500" size={24} />
+                +91 82003 49770
               </a>
 
               {/* Email */}
               <a
-                href="mailto:info@aroma-international.com"
+                href="mailto:info@avlsglobaltrade.com"
                 className="mb-2 flex items-center hover:cursor-pointer"
               >
                 <MdOutlineMail className="mr-2 text-blue-500" size={24} />
-                info@aroma-international.com
+                info@avlsglobaltrade.com
               </a>
             </p>
             {/* Social Media Links */}
@@ -136,7 +141,7 @@ const Footer = () => {
         <div className="flex items-center justify-center gap-2 mt-8 text-center text-sm">
           <p>
             All Rights Reserved{" "}
-            <span className="font-bold">Aroma International </span>Managed By{" "}
+            <span className="font-bold">AVLS Global Trade </span>Managed By{" "}
             <a
               href="https://www.taniyawebfix.com/"
               target="_blank"
