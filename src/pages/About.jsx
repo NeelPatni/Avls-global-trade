@@ -31,8 +31,7 @@ const About = () => {
             </div>
             {/* Text Content */}
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-              AVLS Global Trade is an export-focused company based in Padra,
-              Vadodara, motivated by government initiatives and goals for
+              AVLS Global Trade is an export-focused company based in Vadodara, motivated by government initiatives and goals for
               imports and exports. With our global business partners, we trade
               in the export of premium quality Indian-origin "Spices," and
               "Grains and Pulses" at the best prices.
